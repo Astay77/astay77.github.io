@@ -1,0 +1,107 @@
+
+
+
+.about__title_small {
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gorizont__line {
+    width: 80px;
+    height: 2px;
+    background-color: rgb(71, 75, 87);
+    margin: 20px;
+}
+
+
+
+.about__text,
+.contacts__card_skype,
+.contacts__card_mail,
+.contacts__card_phone,
+.contacts__card_adress {
+    font-size: 16px;
+    font-family: 'robotoregular', Arial, sans-serif;
+    color: rgb(71, 75, 87);
+    line-height: 1.5;
+    text-align: left;
+}
+
+.contacts__card_skype,
+.contacts__card_mail,
+.contacts__card_phone,
+.contacts__card_adress {
+    color: rgba(71, 75, 87, 0.8);
+}
+
+.about__container {
+    display: flex;
+}
+
+.about__section_left,
+.about__section_right {
+    display: flex;
+    width: 50%; //padding-left: 15px;
+    flex-direction: column;
+}
+
+.about__section_left {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.about__title {
+    display: flex;
+    justify-content: center;
+}
+
+.frontend__diagram_skill,
+.backend__diagram_skill,
+.workflow__diagram_skill {
+    font-size: 28px;
+    font-family: 'robotoregular', Arial, sans-serif;
+    color: rgb(71, 75, 87);
+    line-height: 1.143;
+}
+
+
+.about__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.about__myphoto {
+    background-image: url('../images/photo.jpg');
+    width: 440px;
+    height: 395px;
+}
+
+.contacts__card {
+    width: 580px;
+    height: 280px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.702;
+    position: absolute;
+}
+
+.contacts__card_title {
+    display: flex;
+    justify-content: center;
+}
+
+.contacts__card_left,
+.contacts__card_right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contacts__card_left {
+    float: left;
+}
+
+.map {
+    width: 1800px;
+    height: 1100px;
+}

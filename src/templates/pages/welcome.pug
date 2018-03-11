@@ -1,0 +1,25 @@
+extends ../template
+
+block variables
+	- var title = 'Авторизуйтесь'
+
+block content
+	div.welcome__login_container
+		button.welcome__login Авторизоваться
+	div.welcome__container
+		div.welcome__block
+			div.welcome__avatar
+			div.welcome__name
+				h4 Александр Салтыков
+			div.welcome__title
+				h5 Личный сайт веб разработчика
+			div.welcome__soc
+
+
+
+
+			nav.welcome__nav
+				button.a.welcome__item(href='my-works.html' title='main') Мои работы
+				button.a.welcome__item(href='about.html' title='about') Обо мне
+				button.a.welcome__item(href='blog.html' title='blog') Блог
+

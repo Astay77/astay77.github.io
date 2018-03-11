@@ -1,0 +1,60 @@
+extends ../template
+
+block variables
+	- var title = 'Мои работы'
+
+block content
+	h1 Мои работы
+	div.centr__block
+		div.centr__block_left
+			div.centr__block_title
+				h3 Сайт школы онлайн образования 
+			div.centr__block_tehnology
+				h5 HTML, CSS, JAVASCRIPT
+			div.centr__block_button
+				h5 Посмотреть сайт
+		div.centr__block_right
+			div.centr__block_slaider
+				include ../common/slider.pug
+	div.block__reviews
+		div.block__reviews_title
+			h3 Что обо мне говорят
+		div.block__reviews_left
+			div.reviews__avatar
+				div.reviews__avatar_photo
+			div.reviews__text
+				h5 Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!!! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+			div.reviews__name
+				h5 Ковальчук Дмитрий
+			div.reviews__job
+				h5 - основатель LoftSchool 
+		div.block__reviews_left
+			div.reviews__avatar
+				div.reviews__avatar_photo
+			div.reviews__text
+				h5 Этот код выдержит любые испытания. Только пожалуйста, не загружйте сайт на слишком старых браузерах!
+			div.reviews__name
+				h5 Сабанцев Владимир
+			div.reviews__job
+				h5 - преподаватель
+						
+			form.feedback__form(method = 'POST' action = '/ register')
+				div.feedback__title
+					h2 Связаться со мной
+				label(for="feedback__name")
+				input.feedback__field(name="feedback__name" id="feedback__name" placeholder="Ваше имя")
+				label(for="feedback__email")
+				input.feedback__field(name="feedback__email" id="feedback__email" placeholder="Ваш email")
+				label(for="feedback__message")
+				textarea(name="feedback__message" id="feedback__message" placeholder="Ваше сообщение")
+				button Отправить
+				button Очистить
+
+
+
+
+
+
+
+
+	

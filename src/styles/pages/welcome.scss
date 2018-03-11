@@ -1,0 +1,43 @@
+.welcome__block {
+    width: 380px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome__avatar {
+    background-image: url('../images/photo__header.jpg');
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+}
+
+.welcome__name {
+    font-size: 28px;
+    font-family: 'robotoregular', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 1.214;
+    text-align: center;
+}
+
+.welcome__title {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    text-align: center;
+}
+
+.welcome__item {
+    margin: 20px;
+height: 50px;
+}
+
+
+.welcome__login {
+  font-size: 16px;
+  font-family: 'robotoregular', Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  line-height: 2.257;
+  text-align: center;
+}

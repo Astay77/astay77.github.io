@@ -1,0 +1,27 @@
+extends ../template
+
+block variables
+	- var title = 'Авторизуйтесь'
+
+block content
+	div.login__container
+		div.login__block
+			div.login__title
+				h3 Авторизуйтесь
+			label(for="login__field")
+			input.login__field(name="login__field" id="login__field" placeholder="Логин")
+			label(for="login__password")
+			input.login__password(name="login__password" id="login__password" placeholder="Пароль")
+			div.login__checkbox_block
+				label(for="login__checkbox")
+				input.login__checkbox(name="login__checkbox" type="checkbox" id="login__checkbox")
+				h5 Я человек
+			div.login__question
+				h5 Вы точно не робот?
+			
+			div.login__button_block
+				button.login__tomain
+					h5 На главную
+				button.login__tocomein
+					h5 Войти
+
