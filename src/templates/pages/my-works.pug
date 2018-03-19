@@ -4,8 +4,12 @@ block variables
 	- var title = 'Мои работы'
 
 block content
-	h1 Мои работы
-	div.centr__block
+	include ./../common/header__about__works.pug
+	section.section-myworks__title
+		div.gorizont__line
+		h1 Мои работы
+		div.gorizont__line
+	section.centr__block
 		div.centr__block_left
 			div.centr__block_title
 				h3 Сайт школы онлайн образования 
@@ -14,9 +18,9 @@ block content
 			div.centr__block_button
 				h5 Посмотреть сайт
 		div.centr__block_right
-			div.centr__block_slaider
-				include ../common/slider.pug
-	div.block__reviews
+			<!--div.centr__block_slaider-->
+			<!--	include ../common/slider.pug-->
+	section.block__reviews
 		div.block__reviews_title
 			h3 Что обо мне говорят
 		div.block__reviews_left
@@ -49,6 +53,7 @@ block content
 				textarea(name="feedback__message" id="feedback__message" placeholder="Ваше сообщение")
 				button Отправить
 				button Очистить
+	include ./../common/footer.pug
 
 
 

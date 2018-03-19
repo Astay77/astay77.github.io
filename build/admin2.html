@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Admin2</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <script src="./assets/scripts/bundle.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="admin-header">
+        <div class="admin-header__container">
+          <div class="admin-header__wrap-left">
+            <div class="admin-header__title">Панель администрирования</div>
+          </div>
+          <div class="admin-header__wrap-right"><a class="admin-header__back" href="./index.html" title="link">
+              <h5>Вернуться на сайт</h5></a></div>
+        </div>
+        <div class="admin-header__button-panel">
+          <button class="admin-header__button admin-header__button-activ"><a class="admin-header__link-tab1" href="./admin1.html">
+              <h5>TAB 1</h5></a></button>
+          <button class="admin-header__button"> <a class="admin-header__link-tab2" href="./admin2.html">
+              <h5>TAB 2</h5></a></button>
+          <button class="admin-header__button"> <a class="admin-header__link-tab3" href="./admin3.html">
+              <h5>TAB 3</h5></a></button>
+          <button class="admin-header__button"> <a class="admin-header__link-tab4" href="./admin4.html">
+              <h5>TAB 4</h5></a></button>
+        </div>
+      </header>
+      <section class="admin-content">
+        <div class="admin-content__title">Страница &#171;Блог&#187;</div>
+        <div class="admin-content__action"> 
+          <h5>Добавить запись</h5>
+        </div>
+        <div class="admin-content__list">
+          <label class="admin-content__item" for="note-name">
+            <input class="admin-content__input" type="text" name="note-name" placeholder="Название">
+          </label>
+          <label class="admin-content__item" for="note-date">
+            <input class="admin-content__input" type="text" name="note-date" placeholder="Дата">
+          </label>
+          <label class="admin-content__item">
+            <textarea class="admin-content__textarea" name="textarea__content" placeholder="Содержание"></textarea>
+          </label>
+        </div>
+        <button class="button__admin">Добавить</button>
+      </section>
+    </div>
+  </body>
+</html>

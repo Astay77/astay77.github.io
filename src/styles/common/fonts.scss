@@ -2,26 +2,27 @@
 
 @font-face {
     font-family: 'fontawesomeregular';
-    src: url('../fonts/fontawesome-webfont.woff2') format('woff2'),
-         url('../fonts/fontawesome-webfont.woff') format('woff');
+    src: url('./../fonts/fontawesome-webfont.woff2') format('woff2'),
+         url('./../fonts/fontawesome-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
-@font-face {
-    font-family: 'sansus_webissimoregular';
-    src: url('../fonts/sansus-webissimo-regular-webfont.woff2') format('woff2'),
-         url('../fonts/sansus-webissimo-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 @font-face {
     font-family: 'robotoregular';
-    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
-         url('../fonts/roboto-regular-webfont.woff') format('woff');
+    src: url('./../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('./../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bernier_regularregular';
+    src: url('./../fonts/bernierregular-regular-webfont.woff2') format('woff2'),
+         url('./../fonts/bernierregular-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 

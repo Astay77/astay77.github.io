@@ -1,0 +1,22 @@
+extends ../template
+
+block variables
+	- var title = 'Admin2'
+
+block content
+	include ./../common/admin-header.pug
+	section.admin-content
+		div.admin-content__title Страница &#171;Блог&#187;
+		div.admin-content__action 
+			h5 Добавить запись
+		div.admin-content__list
+			label.admin-content__item(for="note-name")
+				input.admin-content__input(type="text", name="note-name", placeholder="Название")
+			label.admin-content__item(for="note-date")
+				input.admin-content__input(type="text", name="note-date", placeholder="Дата")
+			label.admin-content__item
+				textarea.admin-content__textarea(name="textarea__content", placeholder="Содержание")
+		button.button__admin Добавить
+
+
+

@@ -1,3 +1,9 @@
+.login__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h3.login__title,
 h5.login__question {
     color: #fff;
@@ -48,11 +54,118 @@ h5.login__question {
 }
 
 
-.footer__big {
+//checkbox
+
+.checkbox {
     display: none;
+}
+
+.checkbox-custom {
+    position: relative;
+    width: 17px;
+    height: 17px;
+    border-radius: 3px;
+    margin-right: 10px;
+    background: #fff;
+}
+
+.checkbox-custom,
+.checkbox__label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.checkbox__label {
+    width: 100%;
+    cursor: pointer;
+}
+
+.checkbox:checked+.checkbox-custom::before {
+    content: '\2714';
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    color: #e35028;
+    border-radius: 2px;
+}
+
+.checkbox__label {
+    margin-bottom: 10px;
+}
+
+
+//radio
+.form__controls {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.form__radio {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.form__input-radio {
+    position: absolute;
+    visibility: hidden;
+}
+
+.radio2 {
+    padding-left: 17px;
+}
+
+.form__input-radio:not(checked)+.form__field-title .form__btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e35028;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.form__input-radio:checked+.form__field-title .form__btn:after {
+    opacity: 1;
+}
+
+.form__radio-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    font-family: 'robotoregular', Arial, sans-serif;
+    margin-right: 5px;
+    color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.form__input-radio:checked+.form__radio-text {
+    color: red;
+}
+
+
+
+
+
+.footer__big {
+    //display: none;
 }
 
 .data__author {
     background-color: transparent;
     opacity: 1;
+}
+
+.footer__small {
+    //display: none;
 }

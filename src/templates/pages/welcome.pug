@@ -5,7 +5,8 @@ block variables
 
 block content
 	div.welcome__login_container
-		button.welcome__login Авторизоваться
+		button.welcome__login 
+			h5 Авторизоваться
 	div.welcome__container
 		div.welcome__block
 			div.welcome__avatar
@@ -14,12 +15,26 @@ block content
 			div.welcome__title
 				h5 Личный сайт веб разработчика
 			div.welcome__soc
-
-
-
+				ul.welcome__soc-list
+					li.welcome__soc-item
+						a.welcome__soc-link(href='https://vk.com', title='VK')
+							svg.welcome__item-icon
+								<use xlink:href="./assets/images/sprite-welcome.svg#vk"></use> 
+					li.welcome__soc-item
+						a.welcome__soc-link(href='https://github.com/Astay77', title='GitHub')
+							svg.welcome__item-icon
+								<use xlink:href="./assets/images/sprite-welcome.svg#github"></use>
+					li.welcome__soc-item
+						a.welcome__soc-link(href='https://www.linkedin.com', title='Link')
+							svg.welcome__item-icon
+								<use xlink:href="./assets/images/sprite-welcome.svg#in"></use>
 
 			nav.welcome__nav
-				button.a.welcome__item(href='my-works.html' title='main') Мои работы
-				button.a.welcome__item(href='about.html' title='about') Обо мне
-				button.a.welcome__item(href='blog.html' title='blog') Блог
+				a.welcome__item(href='./my-works.html' title='main') 
+					h5.welcome-button.welcome-button_radius-left Мои работы
+				a.welcome__item(href='./about.html' title='about')
+					h5.welcome-button Обо мне
+				a.welcome__item(href='./blog.html' title='blog') 
+					h5.welcome-button.welcome-button_radius-right Блог
 
+	include ./../common/footer__small.pug

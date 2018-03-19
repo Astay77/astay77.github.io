@@ -1,0 +1,21 @@
+extends ../template
+
+block variables
+	- var title = 'Admin2'
+
+block content
+	include ./../common/admin-header.pug
+	section.admin-content
+		div.admin-content__title Страница &#171;Мои работы&#187;
+		div.admin-content__action 
+			h5 Добавить работу
+		div.admin-content__list
+			label.admin-content__item(for="project-name")
+				input.admin-content__input(type="text", name="project-name", placeholder="Название проекта")
+			label.admin-content__item(for="project-technology")
+				input.admin-content__input(type="text", name="project-technology", placeholder="Технологии")
+			div.admin-content__download
+				a.admin-content__download-image(href="#")
+					img.download-image(src="assets/images/download__image.png" alt="download-image")
+					h5.download-image__title Загрузить картинку
+		button.button__admin Добавить

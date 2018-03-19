@@ -1,107 +1,288 @@
-
-
-
-.about__title_small {
-display: flex;
-    flex-direction: column;
+//центральный блок левая часть
+.about__title {
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-.gorizont__line {
-    width: 80px;
-    height: 2px;
-    background-color: rgb(71, 75, 87);
-    margin: 20px;
-}
-
-
-
-.about__text,
-.contacts__card_skype,
-.contacts__card_mail,
-.contacts__card_phone,
-.contacts__card_adress {
-    font-size: 16px;
-    font-family: 'robotoregular', Arial, sans-serif;
-    color: rgb(71, 75, 87);
-    line-height: 1.5;
-    text-align: left;
-}
-
-.contacts__card_skype,
-.contacts__card_mail,
-.contacts__card_phone,
-.contacts__card_adress {
-    color: rgba(71, 75, 87, 0.8);
-}
-
-.about__container {
-    display: flex;
-}
-
-.about__section_left,
-.about__section_right {
-    display: flex;
-    width: 50%; //padding-left: 15px;
-    flex-direction: column;
+    color: rgb(55, 62, 66);
 }
 
 .about__section_left {
     padding-left: 80px;
     padding-right: 80px;
+    background-color: #efeee9;
 }
 
-.about__title {
+.about__myphoto {
+    background-image: url('./../images/photo.jpg');
+    width: 445px;
+    height: 390px;
+}
+
+.about__text-left {
+    margin-bottom: 40px;
+}
+
+//центральный блок правая часть
+.about__title-small,
+.about__title-small_up,
+.about__title-small_down {
+    font-size: 35px;
     display: flex;
+    color: rgb(69, 90, 100);
     justify-content: center;
+    align-items: center;
+    font-family: 'bernier_regularregular', Arial, sans-serif;
+}
+
+.about__title-small {
+    padding-top: 30px;
+}
+
+.about__title-small_down {
+    padding-top: 0px;
+}
+
+
+
+.about__section_right {
+    background-color: #eeebdf;
 }
 
 .frontend__diagram_skill,
 .backend__diagram_skill,
 .workflow__diagram_skill {
-    font-size: 28px;
-    font-family: 'robotoregular', Arial, sans-serif;
-    color: rgb(71, 75, 87);
+    color: rgb(69, 90, 100);
     line-height: 1.143;
+    padding: 40px 0px 0px 40px;
 }
 
+
+//общее
+.about__container {
+    display: flex;
+}
 
 .about__info {
     display: flex;
     flex-direction: column;
 }
 
-.about__myphoto {
-    background-image: url('../images/photo.jpg');
-    width: 440px;
-    height: 395px;
-}
-
-.contacts__card {
-    width: 580px;
-    height: 280px;
-    background-color: rgb(255, 255, 255);
-    opacity: 0.702;
-    position: absolute;
-}
-
-.contacts__card_title {
+.about__section_left,
+.about__section_right {
     display: flex;
-    justify-content: center;
-}
-
-.contacts__card_left,
-.contacts__card_right {
-    display: flex;
-    flex-direction: column;
     width: 50%;
+    flex-direction: column;
 }
 
-.contacts__card_left {
-    float: left;
+.gorizont__line {
+    width: 22px;
+    height: 5px;
+    background-color: rgb(55, 62, 66);
+    margin: 20px;
+    opacity: 0.2;
 }
+
+
+
+h5.about__text-right {
+    padding-left: 40px;
+    padding-top: 30px;
+}
+
+.about__text {
+    color: rgb(69, 90, 100);
+}
+
+.about__text,
+.contacts-card__skype,
+.contacts-card__mail,
+.contacts-card__phone,
+.contacts-card__adress {
+    font-size: 16px;
+    font-family: 'robotoregular', Arial, sans-serif;
+    text-align: left;
+    z-index: 31;
+}
+
+
+
+
+
+.diagram_item {
+    font-size: 14px;
+    font-family: 'robotoregular', Arial, sans-serif;
+    color: rgb(0, 191, 165); //line-height: 2.293;
+    //text-align: center;
+}
+
+
+
+
+//карта контактов
+.contacts-card__skype,
+.contacts-card__mail,
+.contacts-card__phone,
+.contacts-card__adress {
+    color: rgba(71, 75, 87, 0.8);
+    margin: 20px 0px; //line-height: 6.195;
+    display: flex;
+}
+
+.contacts-card__icon {
+    margin-right: 10px;
+}
+
+.contacts-card__info {
+    margin-left: 40px;
+}
+
+.contacts-card {
+    width: 390px;
+    height: 290px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.851; //position: absolute;
+    border-radius: 5px;
+    z-index: 20;
+}
+
+.contacts-card__title {
+    font-family: 'bernier_regularregular', Arial, sans-serif;
+    font-size: 35px;
+    color: rgb(55, 62, 66);
+    line-height: 1.171;
+}
+
 
 .map {
-    width: 1800px;
-    height: 1100px;
+    width: 1200px;
+    height: 970px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//slill diagram
+.frontend__diagram,
+.backend__diagram,
+.workflow__diagram {
+    margin-left: 30px;
+}
+
+.circles {
+    fill: none;
+    stroke-width: 15;
+}
+
+.circle__first {
+    stroke: #dfdcd5;
+}
+
+.circle__second {
+    stroke: #1bb696;
+    stroke-dasharray: .0010 282.6;
+    transition: all 1s;
+}
+
+.item {
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    margin: 10px;
+}
+
+.diagram_item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1bb696;
+    font-weight: bold;
+}
+
+.circles:hover .circle-0 {
+    stroke-dasharray: .001 282.6;
+}
+
+.circles:hover .circle-5 {
+    stroke-dasharray: 14.13 282.6;
+}
+
+.circles:hover .circle-10 {
+    stroke-dasharray: 28.26 282.6;
+}
+
+.circles:hover .circle-15 {
+    stroke-dasharray: 42.39 282.6;
+}
+
+.circles:hover .circle-20 {
+    stroke-dasharray: 56.52 282.6;
+}
+
+.circles:hover .circle-25 {
+    stroke-dasharray: 70.65 282.6;
+}
+
+.circles:hover .circle-30 {
+    stroke-dasharray: 84.78 282.6;
+}
+
+.circles:hover .circle-35 {
+    stroke-dasharray: 98.91 282.6;
+}
+
+.circles:hover .circle-40 {
+    stroke-dasharray: 113.04 282.6;
+}
+
+.circles:hover .circle-45 {
+    stroke-dasharray: 127.17 282.6;
+}
+
+.circles:hover .circle-50 {
+    stroke-dasharray: 141.3 282.6;
+}
+
+.circles:hover .circle-55 {
+    stroke-dasharray: 155.43 282.6;
+}
+
+.circles:hover .circle-60 {
+    stroke-dasharray: 169.56 282.6;
+}
+
+.circles:hover .circle-65 {
+    stroke-dasharray: 183.69 282.6;
+}
+
+.circles:hover .circle-70 {
+    stroke-dasharray: 197.82 282.6;
+}
+
+.circles:hover .circle-75 {
+    stroke-dasharray: 211.95 282.6;
+}
+
+.circles:hover .circle-80 {
+    stroke-dasharray: 226.08 282.6;
+}
+
+.circles:hover .circle-85 {
+    stroke-dasharray: 240.21 282.6;
+}
+
+.circles:hover .circle-90 {
+    stroke-dasharray: 254.34 282.6;
+}
+
+.circles:hover .circle-95 {
+    stroke-dasharray: 268.47 282.6;
+}
+
+.circles:hover .circle-100 {
+    stroke-dasharray: 282.6 282.6;
 }

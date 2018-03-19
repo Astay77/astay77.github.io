@@ -1,65 +1,65 @@
-footer {
+.footer__big {
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 185px;
-    flex: 0 0 auto;
+    height: 150px;
     font-size: 16px;
-    font-family: 'robotoregular', Arial, sans-serif;
-    color: rgb(255, 255, 255);
-} 
+    background-color: rgb(55, 62, 66);
+    opacity: 0.851;
+}
 
-.footer__container {
-    min-width: 300px;
-    max-width: 1180px;
+.footer__big_container {
     margin: 0 auto;
     display: flex;
+    height: 100%;
+    flex-direction: column;
 }
 
-.footer__big {
-    background-color: rgb(28, 31, 41);
-    opacity: 0.851;
-    width: 100%;
-    height: 150px;
+.section__up,
+.section__down {
+    height: 50%;
 }
 
-.footer__big_list {
+.section__line {
+    background-color: rgb(255, 255, 255);
+    opacity: 0.102;
+    height: 1px;
+}
+
+.section__up_left,
+.section__up_right,
+.section__down_left,
+.section__down_right {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.section__up_right,
+.section__down_right {
+    justify-content: flex-end;
+}
+
+.menu__text,
+.section__down,
+.section__up {
     display: flex;
 }
-
-.section__left,
-.section__centr,
-.section__right,
-.section__line {
-    margin: 15px 5px;
-}
-
-
-.section__centr {
-    width: 50%;
-}
-
-.section__left {
-    width: 30%;
-}
-
-.section__line {
-    width: 2px;
-    height: 100px;
-    background-color: rgb(255, 255, 255);
-    opacity: 0.2;
-}
-
 
 .menu__text {
-    display: flex;
-    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    align-items: center;
 }
 
-.section__big,
-.menu__footer_link {
+.menu__footer_link,
+.section__down_text {
+    font-size: 16px;
+    font-family: 'robotoregular', Arial, sans-serif;
+    line-height: 1.5;
     text-align: left;
     font-weight: 200;
 }
@@ -69,20 +69,53 @@ footer {
     color: rgb(255, 255, 255);
 }
 
-
-.data__author {
-    display: flex;
-    justify-content: center;
-    line-height: 1.502;
-    background-color: rgb(8, 60, 150);
-    opacity: 0.851;
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    align-items: center;
+.menu__footer_item {
+    margin: 30px;
 }
 
-.footer__small {
+.section__down_text {
+    margin-left: 30px;
+    color: rgba(255, 255, 255, 0.502);
+}
+
+.section__down_text {
+    margin-right: 30px;
+}
+
+.section__up_right {
+    margin-right: 20px;
+}
+
+//sptite social net
+.footer__soc {
     width: 100%;
-    height: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+
+
+.footer__soc-list {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__item-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border: 1px solid #6d7f80;
+    border-radius: 50%;
+    stroke: #9eaaab;
+    fill-opacity: 0.1;
+    stroke-width: none;
+}
+
+.footer__item-icon:hover {
+    fill: #fff;
+    fill-opacity: 1;
+    cursor: pointer;
 }

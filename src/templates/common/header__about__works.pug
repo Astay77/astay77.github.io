@@ -1,0 +1,33 @@
+extends ../template
+
+
+block variables
+	- var title = 'Обо мне'
+
+block content
+	div.header__about__works
+		a.menu-hamburger(href="#")
+			img.menu-hamburger__icon(src="./assets/images/hamburger.svg" alt="menu hamburger")
+		div.header-container
+			div.header__block
+				div.header__avatar
+				div.header-block__name
+					h3 Александр Салтыков
+				div.header-block__title
+					h5 Личный сайт веб разработчика
+				div.header__soc
+					ul.header__soc-list
+						li.header__soc-item
+							a.header__soc-link(href='https://vk.com', title='VK')
+								svg.header__item-icon
+									<use xlink:href="./assets/images/sprite-welcome.svg#vk"></use> 
+						li.header__soc-item
+							a.header__soc-link(href='https://github.com/Astay77', title='GitHub')
+								svg.header__item-icon
+									<use xlink:href="./assets/images/sprite-welcome.svg#github"></use>
+						li.header__soc-item
+							a.header__soc-link(href='https://www.linkedin.com', title='Link')
+								svg.header__item-icon
+									<use xlink:href="./assets/images/sprite-welcome.svg#in"></use>
+		a.page-down(href="#")
+			img.page-down__icon(src="./assets/images/arrow_down.svg" alt="page down")

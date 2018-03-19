@@ -1,17 +1,20 @@
-@import "common/media";
+@import "./common/media";
 
-@import 'common/normalize';
-@import 'common/base';
-@import 'common/fonts';
-@import 'common/menu';
-@import 'common/technologies';
-@import 'common/slider';
-@import 'common/footer';
+@import './common/normalize';
+@import './common/base';
+@import './common/fonts';
+@import './common/menu';
+@import './common/technologies';
+@import './common/slider';
+@import './common/footer';
+@import './common/footer__small';
+@import './common/header__about__works';
 
-@import 'pages/about';
-@import 'pages/blog';
-@import 'pages/index';
-@import 'pages/login';
-@import 'pages/my-works';
-@import 'pages/welcome';
+@import './pages/about';
+@import './pages/blog';
+@import './pages/index';
+@import './pages/login';
+@import './pages/my-works';
+@import './pages/welcome';
+@import './pages/admin';
 

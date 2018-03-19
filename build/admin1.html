@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Admin</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <script src="./assets/scripts/bundle.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="admin-header">
+        <div class="admin-header__container">
+          <div class="admin-header__wrap-left">
+            <div class="admin-header__title">Панель администрирования</div>
+          </div>
+          <div class="admin-header__wrap-right"><a class="admin-header__back" href="./index.html" title="link">
+              <h5>Вернуться на сайт</h5></a></div>
+        </div>
+        <div class="admin-header__button-panel">
+          <button class="admin-header__button admin-header__button-activ"><a class="admin-header__link-tab1" href="./admin1.html">
+              <h5>TAB 1</h5></a></button>
+          <button class="admin-header__button"> <a class="admin-header__link-tab2" href="./admin2.html">
+              <h5>TAB 2</h5></a></button>
+          <button class="admin-header__button"> <a class="admin-header__link-tab3" href="./admin3.html">
+              <h5>TAB 3</h5></a></button>
+          <button class="admin-header__button"> <a class="admin-header__link-tab4" href="./admin4.html">
+              <h5>TAB 4</h5></a></button>
+        </div>
+      </header>
+      <section class="admin-content">
+        <div class="admin-content__title">Страница &#171;Обо мне&#187;</div>
+        <div class="tuning-skill__frontend">
+          <div class="tuning-skill__title">Frontend</div>
+          <table class="tuning-list">
+            <tr class="tuning-skill__item"> 
+              <th class="tuning-skill__name">HTML</th>
+              <th class="tuning-skill__size">
+                <label class="tuning-skill__field" for="skill-size">
+                  <input class="tuning__input" type="number" name="skill-size" min="0" max="100" step="10">
+                </label>
+              </th>
+              <th class="tuning-skill__measure">%</th>
+            </tr>
+            <tr class="tuning-skill__item"> 
+              <th class="tuning-skill__name">CSS</th>
+              <th class="tuning-skill__size">
+                <label class="tuning-skill__field" for="skill-size">
+                  <input class="tuning__input" type="number" name="skill-size" min="0" max="100" step="10">
+                </label>
+              </th>
+              <th class="tuning-skill__measure">%</th>
+            </tr>
+            <tr class="tuning-skill__item"> 
+              <th class="tuning-skill__name">JavaScript</th>
+              <th class="tuning-skill__size">
+                <label class="tuning-skill__field" for="skill-size">
+                  <input class="tuning__input" type="number" name="skill-size" min="0" max="100" step="10">
+                </label>
+              </th>
+              <th class="tuning-skill__measure">%</th>
+            </tr>
+          </table>
+        </div>
+        <div class="tuning-skill__workflow">
+          <div class="tuning-skill__title">Workflow</div>
+          <table class="tuning-list">
+            <tr class="tuning-skill__item"> 
+              <th class="tuning-skill__name">Git</th>
+              <th class="tuning-skill__size">
+                <label class="tuning-skill__field" for="skill-size">
+                  <input class="tuning__input" type="number" name="skill-size" min="0" max="100" step="10">
+                </label>
+              </th>
+              <th class="tuning-skill__measure">%</th>
+            </tr>
+            <tr class="tuning-skill__item"> 
+              <th class="tuning-skill__name">Gulp</th>
+              <th class="tuning-skill__size">
+                <label class="tuning-skill__field" for="skill-size">
+                  <input class="tuning__input" type="number" name="skill-size" min="0" max="100" step="10">
+                </label>
+              </th>
+              <th class="tuning-skill__measure">%</th>
+            </tr>
+            <tr class="tuning-skill__item"> 
+              <th class="tuning-skill__name">Bower</th>
+              <th class="tuning-skill__size">
+                <label class="tuning-skill__field" for="skill-size">
+                  <input class="tuning__input" type="number" name="skill-size" min="0" max="100" step="10">
+                </label>
+              </th>
+              <th class="tuning-skill__measure">%</th>
+            </tr>
+          </table>
+        </div>
+        <div class="tuning-skill__backend">
+          <div class="tuning-skill__title">Backend</div>
+          <table class="tuning-list">
+            <tr class="tuning-skill__item"> 
+              <th class="tuning-skill__name">PHP</th>
+              <th class="tuning-skill__size">
+                <label class="tuning-skill__field" for="skill-size">
+                  <input class="tuning__input" type="number" name="skill-size" min="0" max="100" step="10">
+                </label>
+              </th>
+              <th class="tuning-skill__measure">%</th>
+            </tr>
+            <tr class="tuning-skill__item"> 
+              <th class="tuning-skill__name">Node.js</th>
+              <th class="tuning-skill__size">
+                <label class="tuning-skill__field" for="skill-size">
+                  <input class="tuning__input" type="number" name="skill-size" min="0" max="100" step="10">
+                </label>
+              </th>
+              <th class="tuning-skill__measure">%</th>
+            </tr>
+            <tr class="tuning-skill__item"> 
+              <th class="tuning-skill__name">Mongo.db</th>
+              <th class="tuning-skill__size">
+                <label class="tuning-skill__field" for="skill-size">
+                  <input class="tuning__input" type="number" name="skill-size" min="0" max="100" step="10">
+                </label>
+              </th>
+              <th class="tuning-skill__measure">%</th>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <button class="button__admin"> 
+        <h5>Сохранить</h5>
+      </button>
+    </div>
+  </body>
+</html>

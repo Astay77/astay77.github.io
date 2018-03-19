@@ -5,62 +5,116 @@ block variables
 	- var title = 'Обо мне'
 
 block content
+	
+	include ./../common/header__about__works.pug
+	a.portfolio-header(href="#")
+		<!--img.portfolio-header__icon(src="assets/images/portfolio_header.svg" alt="menu hamburger")-->
 	div.about__container
-		div.about__section_left
-			div.about__title 
+		section.about__section_left
+			div.about__title
+				div.gorizont__line 
 				h1 Обо мне
-			
+				div.gorizont__line
 			div.about__info
 				div.about__myphoto 
-				div.about__title_small
+				div.about__title-small
+					div.gorizont__line
 					h3 Кто я
 					div.gorizont__line
 				div.about__container_lefttext
-					p.about__text Я веб разработчик из Москвы. Мне 34 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.<br> Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-		div.about__section_right
-			div.about__title_small
-				h3 Чем я могу быть вам полезен
+					h5.about__text-left Я веб разработчик из Москвы. Мне 34 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.<br>	Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+		section.about__section_right
+			div.about__title-small
+				div.gorizont__line 
+				div.about__title-small_up Чем я могу быть 
 				div.gorizont__line
+			div.about__title-small_down вам полезен
 			div.about__container_righttext
-				p.about__text Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+				h5.about__text-right Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
 			div.about__diagram
 				h4.frontend__diagram_skill Frontend
 				ul.frontend__diagram
-					li.frontend__diagram_item
-					li.frontend__diagram_item
-					li.frontend__diagram_item
-
+					li.item
+						svg.circles(viewBox="0 0 110 110")
+							circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
+							circle.circle__second.circle-45(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+						span.diagram_item HTML5
+					li.item
+						svg.circles(viewBox="0 0 110 110")
+							circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
+							circle.circle__second.circle-45(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+						span.diagram_item CSS3
+					li.item
+						svg.circles(viewBox="0 0 110 110")
+							circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
+							circle.circle__second.circle-45(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+						span.diagram_item JavaScript & jQuery
 				h4.backend__diagram_skill Backend
 				ul.backend__diagram
-					li.backend__diagram_item
-					li.backend__diagram_item
-					li.backend__diagram_item
-
+					li.item
+						svg.circles(viewBox="0 0 110 110")
+							circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
+							circle.circle__second.circle-45(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+						span.diagram_item PHP
+					li.item
+						svg.circles(viewBox="0 0 110 110")
+							circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
+							circle.circle__second.circle-45(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+						span.diagram_item mySQL
+					li.item
+						svg.circles(viewBox="0 0 110 110")
+							circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
+							circle.circle__second.circle-45(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+						span.diagram_item Node.js & npm
+					li.item
+						svg.circles(viewBox="0 0 110 110")
+							circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
+							circle.circle__second.circle-45(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+						span.diagram_item Mongo.db
+					
 				h4.workflow__diagram_skill WorkFlow
 				ul.workflow__diagram
-					li.workflow__diagram_item
-					li.workflow__diagram_item
-					li.workflow__diagram_item
-	div.map
-		div.contacts__card
-			div.about__title_small
-				h3 Контакты
+					li.item
+						svg.circles(viewBox="0 0 110 110")
+							circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
+							circle.circle__second.circle-45(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+						span.diagram_item Git
+					li.item
+						svg.circles(viewBox="0 0 110 110")
+							circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
+							circle.circle__second.circle-45(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+						span.diagram_item Gulp
+					li.item
+						svg.circles(viewBox="0 0 110 110")
+							circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
+							circle.circle__second.circle-45(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+						span.diagram_item Bower
+					
+	section.map
+		div.contacts-card
+			div.about__title-small
 				div.gorizont__line
-			div.contacts__card_left
-				div.contacts__card_skype
+				div.contacts-card__title Контакты
+				div.gorizont__line
+			div.contacts-card__info
+				div.contacts-card__skype
+					img.contacts-card__icon(src="./assets/images/skype.svg" alt="skype")
 					h5 astay77
-				div.contacts__card_mail
+				div.contacts-card__mail
+					img.contacts-card__icon(src="./assets/images/e-mail.svg" alt="skype")
 					h5 astay77@gmail.com
-			div.contacts__card_right
-				div.contacts__card_phone
+				div.contacts-card__phone
+					img.contacts-card__icon(src="./assets/images/phone.svg" alt="skype")
 					h5 +7 916 639 22 39
-				div.contacts__card_adress
+				div.contacts-card__adress
+					img.contacts-card__icon(src="./assets/images/map_marker.svg" alt="skype")
 					h5 г.Москва
+	include ./../common/footer.pug
 
 
 
 
 
-		    	
+				
 
 	

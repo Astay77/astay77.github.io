@@ -7,8 +7,8 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="/assets/styles/app.min.css">
-    <script src="/assets/scripts/bundle.js" defer></script>
+    <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <script src="./assets/scripts/bundle.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
@@ -21,13 +21,23 @@
           <input class="login__field" name="login__field" id="login__field" placeholder="Логин">
           <label for="login__password"></label>
           <input class="login__password" name="login__password" id="login__password" placeholder="Пароль">
-          <div class="login__checkbox_block">
-            <label for="login__checkbox"></label>
-            <input class="login__checkbox" name="login__checkbox" type="checkbox" id="login__checkbox">
-            <h5>Я человек</h5>
+          <div class="form__input-elemrow">
+            <label class="checkbox__label" id="i__human">
+              <input class="checkbox" type="checkbox" name="i__human" id="i__human" value="1"><span class="checkbox-custom"></span><span class="form__field-title">Я человек</span>
+            </label>
           </div>
           <div class="login__question">
             <h5>Вы точно не робот?</h5>
+          </div>
+          <div class="form__input-elemrow">
+            <div class="form__controls">
+              <label class="form__radio radio1" for="login__radio">
+                <input class="login__radio" name="login__radio" type="radio" id="login__radio" value="Да"><span class="form__field-title"></span><span class="form__btn">Да</span>
+              </label>
+              <label class="form__radio radio2" for="login__radio2">
+                <input class="login__radio" name="login__radio" type="radio" id="login__radio2" value="Не уверен"><span class="form__field-title"></span><span class="form__btn">Не уверен</span>
+              </label>
+            </div>
           </div>
           <div class="login__button_block">
             <button class="login__tomain">
@@ -39,51 +49,8 @@
           </div>
         </div>
       </div>
-      <footer class="footer"> 
-        <div class="footer__big">
-          <div class="footer__container">
-            <ul class="footer__big_list">
-              <li class="section__left">
-                <div class="section__left_text">Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool</div>
-              </li>
-              <li class="section__line"></li>
-              <li class="section__centr">
-                <ul class="menu__text">
-                  <li class="menu__footer_item"> <a class="menu__footer_link" href="my-works.html">Мои работы</a></li>
-                  <li class="menu__footer_item"> <a class="menu__footer_link" href="/about.html">Обо мне</a></li>
-                  <li class="menu__footer_item"> <a class="menu__footer_link" href="blog.html">Блог</a></li>
-                  <li class="menu__footer_item"> <a class="menu__footer_link" href="/index.html">Авторизация</a></li>
-                </ul>
-                <ul class="menu__soc">
-                  <li class="social__item"><a class="menu__soc_item" href="https://vk.com" title="VK">
-                      <svg class="menu__soc_icon"></svg></a></li>
-                  <li class="social__item"><a class="menu__soc_item" href="https://github.com/Astay77" title="GitHub">
-                      <svg class="menu__soc_icon"></svg></a></li>
-                  <li class="social__item"><a class="menu__soc_item" href="https://www.linkedin.com" title="Link">
-                      <svg class="menu__soc_icon"></svg></a></li>
-                </ul>
-              </li>
-              <li class="section__line"></li>
-              <li class="section__right">
-                <ul class="my__contacts">
-                  <li class="my__contacts_skype">
-                    <h5>astay77</h5>
-                  </li>
-                  <li class="my__contacts_mail">
-                    <h5>astay77@gmail.com</h5>
-                  </li>
-                  <li class="my__contacts_phone">
-                    <h5>+7 916 639 22 39</h5>
-                  </li>
-                  <li class="my__contacts_adress">
-                    <h5>г.Москва</h5>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer__small">
+      <footer class="footer__small">
+        <div class="footer__small_container">
           <div class="data__author">&#169; Салтыков Александр | Создано с любовью в LoftSchool | 2018	</div>
         </div>
       </footer>

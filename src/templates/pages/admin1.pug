@@ -1,0 +1,76 @@
+extends ../template
+
+block variables
+	- var title = 'Admin'
+
+block content
+	include ./../common/admin-header.pug
+	section.admin-content
+		div.admin-content__title Страница &#171;Обо мне&#187;
+		div.tuning-skill__frontend
+			div.tuning-skill__title Frontend
+			table.tuning-list
+				tr.tuning-skill__item 
+					th.tuning-skill__name HTML
+					th.tuning-skill__size
+						label.tuning-skill__field(for="skill-size")
+							input.tuning__input(type="number", name="skill-size", min="0", max="100", step="10")
+					th.tuning-skill__measure %
+				tr.tuning-skill__item 
+					th.tuning-skill__name CSS
+					th.tuning-skill__size
+						label.tuning-skill__field(for="skill-size")
+							input.tuning__input(type="number", name="skill-size", min="0", max="100", step="10")
+					th.tuning-skill__measure %
+				tr.tuning-skill__item 
+					th.tuning-skill__name JavaScript
+					th.tuning-skill__size
+						label.tuning-skill__field(for="skill-size")
+							input.tuning__input(type="number", name="skill-size", min="0", max="100", step="10")
+					th.tuning-skill__measure %
+		div.tuning-skill__workflow
+			div.tuning-skill__title Workflow
+			table.tuning-list
+				tr.tuning-skill__item 
+					th.tuning-skill__name Git
+					th.tuning-skill__size
+						label.tuning-skill__field(for="skill-size")
+							input.tuning__input(type="number", name="skill-size", min="0", max="100", step="10")
+					th.tuning-skill__measure %
+				tr.tuning-skill__item 
+					th.tuning-skill__name Gulp
+					th.tuning-skill__size
+						label.tuning-skill__field(for="skill-size")
+							input.tuning__input(type="number", name="skill-size", min="0", max="100", step="10")
+					th.tuning-skill__measure %
+				tr.tuning-skill__item 
+					th.tuning-skill__name Bower
+					th.tuning-skill__size
+						label.tuning-skill__field(for="skill-size")
+							input.tuning__input(type="number", name="skill-size", min="0", max="100", step="10")
+					th.tuning-skill__measure %
+		div.tuning-skill__backend
+			div.tuning-skill__title Backend
+			table.tuning-list
+				tr.tuning-skill__item 
+					th.tuning-skill__name PHP
+					th.tuning-skill__size
+						label.tuning-skill__field(for="skill-size")
+							input.tuning__input(type="number", name="skill-size", min="0", max="100", step="10")
+					th.tuning-skill__measure %
+				tr.tuning-skill__item 
+					th.tuning-skill__name Node.js
+					th.tuning-skill__size
+						label.tuning-skill__field(for="skill-size")
+							input.tuning__input(type="number", name="skill-size", min="0", max="100", step="10")
+					th.tuning-skill__measure %
+				tr.tuning-skill__item 
+					th.tuning-skill__name Mongo.db
+					th.tuning-skill__size
+						label.tuning-skill__field(for="skill-size")
+							input.tuning__input(type="number", name="skill-size", min="0", max="100", step="10")
+					th.tuning-skill__measure %
+	button.button__admin 
+		h5 Сохранить
+
+
