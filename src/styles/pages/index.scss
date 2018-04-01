@@ -18,18 +18,18 @@
 
 .welcome-wrap:hover .welcome__container,
 .welcome-wrap.hover .welcome__container {
-    //transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
-/*.welcome-wrap, .welcome-block__front, .login-block {
+.welcome-wrap, .welcome-block__front, .login-block {
     width: 380px;
     height: 395px;
-} */
+} 
 
-.welcome-wrap, .login-block, .welcome-block__front  {
+/*.welcome-wrap, .login-block, .welcome-block__front  {
     width: 380px;
     height: 395px;
-}
+}*/
 
 .welcome__container {
     transition: 0.6s;
@@ -46,14 +46,14 @@
 }
 
 .welcome-block__front {
-   //z-index: 2;
-    //transform: rotateY(0deg);
-    transform: rotateY(180deg);
+   z-index: 2;
+    transform: rotateY(0deg);
+    //transform: rotateY(180deg);
 }
 
 .login-block {
-    //transform: rotateY(180deg);
-    transform: rotateY(0deg);
+    transform: rotateY(180deg);
+    //transform: rotateY(0deg);
     z-index: 2;//удалить
 } 
 
