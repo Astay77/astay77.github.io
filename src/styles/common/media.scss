@@ -1,12 +1,24 @@
-
-/* resolutions
-$tablets: 768px;
-$phones: 480px;
-
 @function rem($px) {
   @return $px / 16px + 0rem;
 }
 
+//resolutions
+$tv: 1800px;
+$laptop: 1200px;
+$tablets: 768px;
+$phones: 320px;
+
+@mixin tv {
+  @media screen and (max-width: $tv) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
 
 @mixin tablets {
   @media screen and (max-width: $tablets) {
@@ -18,4 +30,4 @@ $phones: 480px;
   @media screen and (max-width: $phones) {
     @content;
   }
-} */
+}

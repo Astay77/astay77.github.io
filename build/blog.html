@@ -12,41 +12,57 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header__blog">
+      <header class="header-blog"><a class="menu-hamburger" href="#"><img class="menu-hamburger__icon" src="./assets/images/hamburger.svg" alt="menu hamburger"></a>
         <div class="header__myphoto"></div>
-        <h1 class="header__blog_title">Блог</h1>
-        <h5 class="header__blog_title">Статьи, которые я написал</h5>
+        <div class="blog-title__container">
+          <svg class="svg-text__blog"><use xlink:href="./assets/images/text.svg#blog-header"></use></svg>
+          <div class="gorizont__line"></div>
+          <h1 class="blog-title__text">Блог</h1>
+          <div class="gorizont__line"></div>
+        </div>
+        <h5 class="header-blog__title">Статьи, которые я написал</h5>
+        <div class="header__soc">
+          <ul class="header__soc-list">
+            <li class="header__soc-item"><a class="header__soc-link" href="https://vk.com" title="VK">
+                <svg class="header__item-icon"><use xlink:href="./assets/images/sprite-welcome.svg#vk"></use> </svg></a></li>
+            <li class="header__soc-item"><a class="header__soc-link" href="https://github.com/Astay77" title="GitHub">
+                <svg class="header__item-icon"><use xlink:href="./assets/images/sprite-welcome.svg#github"></use></svg></a></li>
+            <li class="header__soc-item"><a class="header__soc-link" href="https://www.linkedin.com" title="Link">
+                <svg class="header__item-icon"><use xlink:href="./assets/images/sprite-welcome.svg#in"></use></svg></a></li>
+          </ul>
+        </div><a class="page-down page-down__blog_none" href="#"><img class="page-down__icon" src="./assets/images/arrow_down.svg" alt="page down"></a>
       </header>
-      <div class="blog__container">
-        <div class="blog__sidebar">
-          <ul class="list__article"> 
-            <li class="list__article_art list__article_artactiv">
+      <div class="blog-container">
+        <aside class="blog-sidebar">
+          <div class="blog-menu__swipe"></div>
+          <ul class="list-article"> 
+            <li class="list-article__art list-article__artactiv">
               <h5>Самое важное в SASS</h5>
             </li>
-            <li class="list__article_art">
+            <li class="list-article__art">
               <h5>Приёмы в вёрстке, без которых не обходится ни один сайт</h5>
             </li>
-            <li class="list__article_art">
+            <li class="list-article__art">
               <h5>Самый необходимый набор Gulp плагинов </h5>
             </li>
-            <li class="list__article_art">
+            <li class="list-article__art">
               <h5>Почему я выбрал Pug    </h5>
             </li>
           </ul>
-        </div>
-        <div class="blog__content"> 
-          <div class="blog__content_article">        
-            <h3>Самое важное в SASS </h3>
-            <div class="date">22 ноября 2017  </div>
-            <div class="article__text">Вот так Sass описывает сам себя в своей документации: Sass — это расширение CSS, которое добавляет силу и элегантность к основному языку. Главная цель Sass — исправить недостатки CSS. Как мы все знаем, это не самый лучший язык в мире. Являясь довольно простым для освоения, он может быстро стать запутанным, особенно на больших проектах. Вот тут-то и вступает в свою роль Sass как метаязык, который улучшает синтаксис CSS, чтобы предоставить дополнительные возможности и удобные инструменты. Между тем, Sass остаётся консервативным в отношении языка CSS. Цель не в том, чтобы превратить CSS в полнофункциональный язык программирования; Sass хочет лишь помочь там, где не справляется CSS. Поэтому начать использовать Sass – не сложнее, чем начать изучать CSS: он просто добавляет дополнительные возможности поверх CSS.</div>
+        </aside>
+        <article class="blog-content"> 
+          <div class="blog-content__article">        
+            <h3 class="blog-content__title">Самое важное в SASS </h3>
+            <h5 class="date">22 ноября 2017  </h5>
+            <h5 class="article-text">Вот так Sass описывает сам себя в своей документации: Sass — это расширение CSS, которое добавляет силу и элегантность к основному языку. Главная цель Sass — исправить недостатки CSS. Как мы все знаем, это не самый лучший язык в мире. Являясь довольно простым для освоения, он может быстро стать запутанным, особенно на больших проектах. Вот тут-то и вступает в свою роль Sass как метаязык, который улучшает синтаксис CSS, чтобы предоставить дополнительные возможности и удобные инструменты. Между тем, Sass остаётся консервативным в отношении языка CSS. Цель не в том, чтобы превратить CSS в полнофункциональный язык программирования; Sass хочет лишь помочь там, где не справляется CSS. Поэтому начать использовать Sass – не сложнее, чем начать изучать CSS: он просто добавляет дополнительные возможности поверх CSS.</h5>
           </div>
           <div class="line__separator"></div>
-          <div class="blog__content_article"> 
-            <h3>Приёмы в вёрстке, без которых не обходится ни один сайт</h3>
-            <div class="date">13 ноября 2017 </div>
-            <div class="article__text">Адаптивная вёрстка сайта позволяет веб-страницам автоматически подстраиваться под экраны планшетов и смартфонов. Мобильный интернет-трафик растёт с каждым годом и чтобы эффективно обрабатывать этот трафик, нужно предлагать пользователям адаптивные сайты с удобным интерфейсом. Поисковые системы используют ряд критериев для оценки адаптивности сайта при просмотре на мобильных устройствах. Google старается упростить пользование Интернетом для владельцев смартфонов и планшетов, отмечая в мобильной выдаче адаптированные под мобильные устройства сайты специальной пометкой mobile-friendly. В Яндексе также работает алгоритм, который отдает предпочтение сайтам с мобильной/адаптивной версией для пользователей в мобильном поиске. Проверить отображение страницы на мобильных устройствах можно на сервисах Яндекс.Вебмастер и Google Developers.</div>
+          <div class="blog-content__article"> 
+            <h3 class="blog-content__title">Приёмы в вёрстке, без которых не обходится ни один сайт</h3>
+            <h5 class="date">13 ноября 2017 </h5>
+            <h5 class="article-text">Адаптивная вёрстка сайта позволяет веб-страницам автоматически подстраиваться под экраны планшетов и смартфонов. Мобильный интернет-трафик растёт с каждым годом и чтобы эффективно обрабатывать этот трафик, нужно предлагать пользователям адаптивные сайты с удобным интерфейсом. Поисковые системы используют ряд критериев для оценки адаптивности сайта при просмотре на мобильных устройствах. Google старается упростить пользование Интернетом для владельцев смартфонов и планшетов, отмечая в мобильной выдаче адаптированные под мобильные устройства сайты специальной пометкой mobile-friendly. В Яндексе также работает алгоритм, который отдает предпочтение сайтам с мобильной/адаптивной версией для пользователей в мобильном поиске. Проверить отображение страницы на мобильных устройствах можно на сервисах Яндекс.Вебмастер и Google Developers.</h5>
           </div>
-        </div>
+        </article>
       </div>
       <footer class="footer__big"> 
         <div class="footer__big_container">
@@ -63,11 +79,11 @@
               <div class="footer__soc">
                 <ul class="footer__soc-list">
                   <li class="footer__soc-item"><a class="footer__soc-link" href="https://vk.com" title="VK">
-                      <svg class="footer__item-icon"><use xlink:href="./assets/images/footer-sprite.svg#vk"></use> </svg></a></li>
+                      <svg class="footer__item-icon"><use xlink:href="./assets/images/sprite-footer.svg#vk"></use> </svg></a></li>
                   <li class="footer__soc-item"><a class="footer__soc-link" href="https://github.com/Astay77" title="GitHub">
-                      <svg class="footer__item-icon"><use xlink:href="./assets/images/footer-sprite.svg#github"></use></svg></a></li>
+                      <svg class="footer__item-icon"><use xlink:href="./assets/images/sprite-footer.svg#github"></use></svg></a></li>
                   <li class="footer__soc-item"><a class="footer__soc-link" href="https://www.linkedin.com" title="Link">
-                      <svg class="footer__item-icon"><use xlink:href="./assets/images/footer-sprite.svg#in"></use></svg></a></li>
+                      <svg class="footer__item-icon"><use xlink:href="./assets/images/sprite-footer.svg#in"></use></svg></a></li>
                 </ul>
               </div>
             </div>

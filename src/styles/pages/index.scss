@@ -1,0 +1,212 @@
+.welcome-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(700px);
+    width: 100vw;
+    perspective: 1000px;
+
+    @include tablets() {
+        height: rem(950px);
+    }
+
+    @include phones() {
+        height: rem(450px);
+    }
+}
+
+
+.welcome-wrap:hover .welcome__container,
+.welcome-wrap.hover .welcome__container {
+    //transform: rotateY(180deg);
+}
+
+/*.welcome-wrap, .welcome-block__front, .login-block {
+    width: 380px;
+    height: 395px;
+} */
+
+.welcome-wrap, .login-block, .welcome-block__front  {
+    width: 380px;
+    height: 395px;
+}
+
+.welcome__container {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.welcome-block__front,
+.login-block {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.welcome-block__front {
+   //z-index: 2;
+    //transform: rotateY(0deg);
+    transform: rotateY(180deg);
+}
+
+.login-block {
+    //transform: rotateY(180deg);
+    transform: rotateY(0deg);
+    z-index: 2;//удалить
+} 
+
+
+
+.welcome__container {
+    width: rem(380px);
+    height: rem(395px);
+    background-color: #e7edef;
+    border-radius: rem(10px);
+
+    @include phones() {
+        width: rem(300px);
+    }
+}
+
+.welcome-block {
+    width: rem(380px);
+    height: rem(395px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: rem(5px);
+    background-color: rgba(252, 252, 252, 0.8);
+}
+
+.welcome-block__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome__soc-link {
+    width: 100%;
+    height: 100%;
+    fill: red;
+}
+
+
+.welcome__avatar {
+    background-image: url('./../images/photo__header.jpg');
+    width: rem(140px);
+    height: rem(140px);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    margin-bottom: rem(20px);
+    margin-top: rem(30px);
+}
+
+.welcome__name {
+    font-size: rem(28px);
+    font-family: 'robotoregular', Arial, sans-serif;
+    color: rgb(69, 90, 100);
+    line-height: 1.214;
+    text-align: center;
+}
+
+.welcome__title {
+    color: rgba(69, 90, 100, 0.8);
+    line-height: 1.5;
+    text-align: center;
+}
+
+.welcome-nav {
+    margin: rem(0px);
+    width: 100%;
+}
+
+.welcome-nav__block {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    border-radius: rem(0px) rem(0px) rem(10px) rem(10px);
+    justify-content: space-between;
+}
+
+.welcome__item {
+    width: 100%;
+    overflow: hidden;
+}
+
+.welcome-nav__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.welcome-button {
+    height: rem(50px);
+    padding: rem(15px) rem(15px);
+    border: none;
+    margin: rem(0px);
+    background-color: rgb(0, 191, 165);
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+    @include phones() {
+        padding: rem(0px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.welcome-button:hover {
+    background-color: #098d85;
+    cursor: pointer;
+}
+
+.welcome__login_container {
+    position: absolute;
+    top: rem(25px);
+    right: rem(50px);
+
+    @include phones() {
+        position: static;
+        width: 100%;
+        height: rem(80px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.welcome__login {
+    color: rgb(255, 255, 255);
+    line-height: 2.257;
+    text-align: center;
+    width: rem(180px);
+    height: rem(45px);
+    border: rem(1px) solid #fff;
+    border-radius: rem(4px);
+}
+
+.welcome__soc {
+    margin-bottom: rem(3px);
+}
+
+.welcome__soc-list {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome__item-icon {
+    width: rem(30px);
+    height: rem(18px);
+    fill: #6fd1c6;
+    margin: rem(38px) rem(10px);
+}
+
+.welcome__item-icon:hover {
+    fill: #00bfa5;
+    cursor: pointer;
+}

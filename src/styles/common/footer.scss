@@ -4,10 +4,18 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 150px;
-    font-size: 16px;
+    height: rem(150px);
+    font-size: rem(16px);
     background-color: rgb(55, 62, 66);
     opacity: 0.851;
+
+    @include tablets() {
+        height: rem(220px);
+    }
+
+    @include phones() {
+        height: rem(263px);
+    }
 }
 
 .footer__big_container {
@@ -20,12 +28,24 @@
 .section__up,
 .section__down {
     height: 50%;
+
+    @include tablets() {
+        flex-direction: column;
+        padding-left: rem(35px);
+        padding-right: rem(35px);
+    }
+
+    @include phones() {
+        flex-direction: column;
+        padding-left: rem(10px);
+        padding-right: rem(10px);
+    }
 }
 
 .section__line {
     background-color: rgb(255, 255, 255);
     opacity: 0.102;
-    height: 1px;
+    height: rem(1px);
 }
 
 .section__up_left,
@@ -36,17 +56,46 @@
     align-items: center;
     width: 50%;
     height: 100%;
+
+    @include tablets() {
+        width: 100%;
+    }
+
+    @include phones() {
+        width: 100%;
+    }
+}
+
+.section__up_left,
+.section__down_left {
+    padding-left: rem(30px);
+
+    @include tablets() {
+        padding-left: rem(0px);
+    }
+
+    @include phones() {
+        padding-left: rem(0px);
+    }
 }
 
 .section__up_right,
 .section__down_right {
     justify-content: flex-end;
+
+    @include tablets() {
+        justify-content: center;
+    }
 }
 
 .menu__text,
 .section__down,
 .section__up {
     display: flex;
+
+    @include tablets() {
+        justify-content: center;
+    }
 }
 
 .menu__text {
@@ -57,12 +106,18 @@
 
 .menu__footer_link,
 .section__down_text {
-    font-size: 16px;
+    font-size: rem(16px);
     font-family: 'robotoregular', Arial, sans-serif;
     line-height: 1.5;
     text-align: left;
     font-weight: 200;
+
+    @include phones() {
+        font-size: rem(13px);
+    }
 }
+
+
 
 .menu__footer_link {
     font-weight: bold;
@@ -70,20 +125,63 @@
 }
 
 .menu__footer_item {
-    margin: 30px;
+    margin-left: rem(30px);
+
+    @include tablets() {
+        margin-left: rem(50px);
+    }
+
+    @include phones() {
+        margin-left: rem(16px);
+    }
+}
+
+.menu__footer_link:hover {
+    color: #009688;
 }
 
 .section__down_text {
-    margin-left: 30px;
+    margin-left: rem(30px);
     color: rgba(255, 255, 255, 0.502);
+    @include tablets() {
+        margin-left: rem(0px);
+        text-align: center;
+    }
+
+    @include phones() {
+        text-align: center;
+    }
 }
 
 .section__down_text {
-    margin-right: 30px;
+    margin-right: rem(30px);
+    @include tablets() {
+        margin-right: rem(0px);
+    }
 }
 
 .section__up_right {
-    margin-right: 20px;
+    padding-right: rem(55px);
+
+    @include tablets() {
+        padding-right: rem(0px);
+    }
+
+    @include phones() {
+        padding-right: rem(0px);
+    }
+}
+
+.section__down_right {
+    padding-right: rem(30px);
+
+    @include tablets() {
+        padding-right: rem(0px);
+    }
+
+    @include phones() {
+        padding-right: rem(0px);
+    }
 }
 
 //sptite social net
@@ -93,6 +191,14 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @include tablets() {
+        justify-content: center;
+    }
+
+    @include phones() {
+        justify-content: center;
+    }
 }
 
 
@@ -104,10 +210,10 @@
 }
 
 .footer__item-icon {
-    width: 35px;
-    height: 35px;
-    margin-right: 10px;
-    border: 1px solid #6d7f80;
+    width: rem(35px);
+    height: rem(35px);
+    margin-right: rem(10px);
+    border: rem(1px) solid #6d7f80;
     border-radius: 50%;
     stroke: #9eaaab;
     fill-opacity: 0.1;

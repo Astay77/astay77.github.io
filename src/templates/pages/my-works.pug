@@ -5,54 +5,92 @@ block variables
 
 block content
 	include ./../common/header__about__works.pug
-	section.section-myworks__title
-		div.gorizont__line
-		h1 Мои работы
-		div.gorizont__line
-	section.centr__block
-		div.centr__block_left
-			div.centr__block_title
-				h3 Сайт школы онлайн образования 
-			div.centr__block_tehnology
-				h5 HTML, CSS, JAVASCRIPT
-			div.centr__block_button
-				h5 Посмотреть сайт
-		div.centr__block_right
+	
+	section.myworks-title
+		div.myworks-title__bg
+			img.myworks-title__bg-svg(src="./assets/images/bg.svg" alt="bg")
+		div.myworks-title__block
+			svg.svg-text__works
+				<use xlink:href="./assets/images/text.svg#works-header"></use>
+			div.myworks-title__block-content    
+				div.gorizont__line
+				h1.myworks-title__text Мои работы
+				div.gorizont__line
+	section.portfolio-block
+		div.block-left
+			div.block-left__container
+				div.block-title
+					div.gorizont__line
+					h3.block-left__text Сайт школы онлайн 
+					div.gorizont__line
+				h3.block-left__text образования                     
+				div.separate-line
+				div.block-tehnology
+					h5.block-tehnology__text HTML, CSS, JAVASCRIPT
+				div.separate-line
+				div.block-left__button
+					h5.button__see-site Посмотреть сайт
+		div.block-right
 			<!--div.centr__block_slaider-->
-			<!--	include ../common/slider.pug-->
-	section.block__reviews
-		div.block__reviews_title
-			h3 Что обо мне говорят
-		div.block__reviews_left
-			div.reviews__avatar
-				div.reviews__avatar_photo
-			div.reviews__text
-				h5 Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!!! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-			div.reviews__name
-				h5 Ковальчук Дмитрий
-			div.reviews__job
-				h5 - основатель LoftSchool 
-		div.block__reviews_left
-			div.reviews__avatar
-				div.reviews__avatar_photo
-			div.reviews__text
-				h5 Этот код выдержит любые испытания. Только пожалуйста, не загружйте сайт на слишком старых браузерах!
-			div.reviews__name
-				h5 Сабанцев Владимир
-			div.reviews__job
-				h5 - преподаватель
-						
-			form.feedback__form(method = 'POST' action = '/ register')
-				div.feedback__title
-					h2 Связаться со мной
+			<!--    include ../common/slider.pug-->
+			div.block-right__visual
+			div.block-right__button
+	section.reviews
+		div.reviews-title__container
+			div.reviews-title
+				svg.svg-text__about
+					<use xlink:href="./assets/images/text.svg#about-header"></use>
+				div.gorizont__line
+				span.reviews-title__text Что обо мне 
+				div.gorizont__line
+			span.reviews-title__text говорят
+		div.reviews-container
+			div.reviews-left
+				div.quotes-icon
+					img.quotes-icon__item(src="./assets/images/quotes.png" alt="quotes")
+				div.reviews-text 
+					h5.reviews-text__info Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!!! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+				div.reviews-avatar
+					div.reviews-avatar__Left
+				div.reviews-name
+					h5.reviews-name__text Ковальчук Дмитрий
+				div.reviews-job
+					h5.reviews-job__text основатель LoftSchool 
+			div.reviews-right
+				div.quotes-icon
+					img.quotes-icon__item(src="./assets/images/quotes.png" alt="quotes")
+				div.reviews-text
+					h5.reviews-text__info Этот код выдержит любые испытания. Только пожалуйста, не загружйте сайт на слишком старых браузерах!
+				div.reviews-avatar
+					div.reviews-avatar__Right
+				div.reviews-name
+					h5.reviews-name__text Сабанцев Владимир
+				div.reviews-job
+					h5.reviews-job__text преподаватель
+		div.feedback-form__container
+			form.feedback-form(method = 'POST' action = '/ register')
+				div.feedback-title
+					div.gorizont__line
+					h3.feedback-title__text Связаться со мной
+					div.gorizont__line
 				label(for="feedback__name")
-				input.feedback__field(name="feedback__name" id="feedback__name" placeholder="Ваше имя")
+				input.feedback-field(name="feedback__name" id="feedback__name" placeholder="Имя")
 				label(for="feedback__email")
-				input.feedback__field(name="feedback__email" id="feedback__email" placeholder="Ваш email")
+				input.feedback-field(name="feedback__email" id="feedback__email" placeholder="Email")
 				label(for="feedback__message")
-				textarea(name="feedback__message" id="feedback__message" placeholder="Ваше сообщение")
-				button Отправить
-				button Очистить
+				textarea.textarea-field(name="feedback__message" id="feedback__message" placeholder="Ваше сообщение")
+				
+				div.form-button
+					ul.form-button__block
+						li.form-button__item
+							button.form-button__button(type="submit") Отправить
+						li.form-button__item
+							button.form-button__button(type="reset") Очистить
+		a.page-up(href="#")
+			img.page-up__icon(src="./assets/images/arrow_down.svg" alt="page down")
+
+
+
 	include ./../common/footer.pug
 
 

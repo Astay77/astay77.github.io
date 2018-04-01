@@ -7,29 +7,33 @@ block variables
 block content
 	
 	include ./../common/header__about__works.pug
-	a.portfolio-header(href="#")
-		<!--img.portfolio-header__icon(src="assets/images/portfolio_header.svg" alt="menu hamburger")-->
-	div.about__container
+	
+	div.about-container
+
 		section.about__section_left
-			div.about__title
+			
+			div.about-title
+				svg.svg-text__about-about
+					<use xlink:href="./assets/images/text.svg#about-header"></use>
 				div.gorizont__line 
-				h1 Обо мне
+				h1.about-title__text Обо мне
 				div.gorizont__line
 			div.about__info
 				div.about__myphoto 
 				div.about__title-small
 					div.gorizont__line
-					h3 Кто я
+					h3.about__title-left Кто я
 					div.gorizont__line
-				div.about__container_lefttext
-					h5.about__text-left Я веб разработчик из Москвы. Мне 34 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.<br>	Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+				div.about-container__lefttext
+					h5.about__text-left Я веб разработчик из Москвы. Мне 34 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.	
+					h5.about__text-left Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 		section.about__section_right
 			div.about__title-small
 				div.gorizont__line 
 				div.about__title-small_up Чем я могу быть 
 				div.gorizont__line
 			div.about__title-small_down вам полезен
-			div.about__container_righttext
+			div.about-container__righttext
 				h5.about__text-right Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
 			div.about__diagram
 				h4.frontend__diagram_skill Frontend
@@ -44,7 +48,7 @@ block content
 							circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
 							circle.circle__second.circle-45(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
 						span.diagram_item CSS3
-					li.item
+					li.item.item_center-mobile
 						svg.circles(viewBox="0 0 110 110")
 							circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
 							circle.circle__second.circle-45(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
@@ -84,7 +88,7 @@ block content
 							circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
 							circle.circle__second.circle-45(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
 						span.diagram_item Gulp
-					li.item
+					li.item.item_center-mobile
 						svg.circles(viewBox="0 0 110 110")
 							circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
 							circle.circle__second.circle-45(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")

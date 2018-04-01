@@ -1,36 +1,73 @@
-
-
-.header__about__works {
+.header__about-works {
     width: 100%;
-    height: 620px;
+    height: rem(500px);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    // background-image: url('assets/images/hamburger.svg');
-    position: abcolute;
+    justify-content: center; 
     z-index: 10;
+
+    @include tablets() {
+        height: 100vh;
+    }
+
+    @include phones() {
+        height: 100vh;
+    }
 }
+
+.header-container {
+    @include tablets() {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
 .header__block {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: rem(125px);
+
+    @include tablets() {
+        margin-top: rem(0px);
+    }
+}
+
+
+.svg-text__portfolio {
+    fill: #fff;
+    position: absolute;
+    width: 90%;
+    opacity: 0.5;
+    height: rem(400px);
+
+    @include phones() {
+        display: none;
+    }
 }
 
 .header__avatar {
     background-image: url('./../images/photo__header.jpg');
-    width: 140px;
-    height: 140px;
+    width: rem(140px);
+    height: rem(140px);
     border-radius: 50%;
     background-repeat: no-repeat;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    margin-bottom: rem(20px);
+    margin-top: rem(30px);
+    z-index: 10;
 }
 
 .header__soc {
     position: absolute;
-    left: 20px;
-    top: 10px;
+    left: rem(55px);
+    top: rem(5px);
+
+    @include phones() {
+        left: rem(10px);
+        top: rem(15px);
+    }
 }
 
 .header__soc-list {
@@ -39,10 +76,14 @@
 }
 
 .header__item-icon {
-    width: 30px;
-    height: 18px;
+    width: rem(30px);
+    height: rem(18px);
     fill: #c1d5d5;
-    margin: 38px 10px;
+    margin: rem(38px) rem(10px);
+
+    @include phones() {
+        margin: rem(0px) rem(10px);
+    }
 }
 
 .header__item-icon:hover {
@@ -52,10 +93,27 @@
 
 .menu-hamburger {
     position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 40px;
-    height: 35px;
+    top: rem(30px);
+    right: rem(60px);
+    width: rem(40px);
+    height: rem(35px);
+
+    @include tablets() {
+        top: rem(25px);
+        right: rem(25px);
+    }
+
+    @include phones() {
+        height: rem(25px);
+        top: rem(10px);
+        right: rem(0px);
+    }
+}
+
+.menu-hamburger__icon {
+    @include phones() {
+        width: rem(25px);
+    }
 }
 
 
@@ -68,19 +126,36 @@
 }
 
 .header-block__name {
-  color: rgb(255, 255, 255);
-  line-height: 2.832;
+    color: rgb(255, 255, 255);
+    line-height: 2.832;
 }
 
+
+
+
 .header-block__title {
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
 }
 
 .page-down {
     position: absolute;
-    top: 550px;
-    left: 49%;
+    top: rem(515px);
+    left: 50%;
     transform: translate(-50%, 0);
+
+    @include tablets() {
+        top: rem(870px);
+    }
+
+    @include phones() {
+        top: rem(500px);
+    }
 }
 
+
+.page-up {
+    display: flex;
+    justify-content: center;
+    transform: rotate(180deg);
+}

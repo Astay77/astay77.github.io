@@ -1,7 +1,8 @@
 .admin-header__container {
     display: flex;
     align-items: center;
-    height: 80px;
+    height: rem(80px)
+;
     background-color: #00bfa5;
 }
 
@@ -16,27 +17,33 @@
 }
 
 .admin-header__title {
-    font-size: 28px;
+    font-size: rem(28px)
+;
     font-family: 'robotoregular', Arial, sans-serif;
     color: rgb(255, 255, 255);
-    margin-left: 30px;
+    margin-left: rem(30px)
+;
 }
 
 .admin-header__back {
     color: rgba(255, 255, 255, 0.702);
     text-decoration: underline;
-    margin-right: 85px;
+    margin-right: rem(85px)
+;
 }
 
 .admin-header__button {
-    width: 180px;
-    height: 60px;
+    width: rem(180px)
+;
+    height: rem(60px)
+;
     border: none;
     background: #f0efe9;
 
     line-height: 2.257;
     text-align: center;
-    border-right: 3px solid #fff;
+    border-right: rem(3px)
+ solid #fff;
 }
 
 .admin-header__button-activ {
@@ -50,19 +57,24 @@
 
 //admin 1
 .admin-content__title {
-    font-size: 21px;
+    font-size: rem(21px)
+;
     font-family: 'robotoregular', Arial, sans-serif;
     color: rgb(69, 90, 100);
     line-height: 1.619;
-    margin-top: 43px;
-    margin-bottom: 40px;
-    margin-left: 30px;
+    margin-top: rem(43px)
+;
+    margin-bottom: rem(40px)
+;
+    margin-left: rem(30px)
+;
 }
 
 .tuning-skill__title,
 .tuning-skill__name,
 .tuning-skill__measure {
-    font-size: 16px;
+    font-size: rem(16px)
+;
     font-family: 'robotoregular', Arial, sans-serif;
     color: rgb(69, 90, 100);
 }
@@ -74,9 +86,12 @@
 .tuning-skill__frontend,
 .tuning-skill__workflow,
 .tuning-skill__backend {
-    width: 260px;
-    margin-bottom: 27px;
-    margin-left: 30px;
+    width: rem(260px)
+;
+    margin-bottom: rem(27px)
+;
+    margin-left: rem(30px)
+;
 }
 
 .tuning-skill__frontend,
@@ -86,17 +101,27 @@
 
 .tuning-skill__name {
     text-align: left;
-    padding-left: 20px;
+    padding-left: rem(20px)
+;
 }
 
 .tuning__input {
-    width: 46px;
-    height: 32px;
+    width: rem(46px)
+;
+    height: rem(32px)
+;
     border: none;
-    border-radius: 5px;
-    margin: 10px 10px 0px 20px;
-    padding: 5px;
-    font-size: 16px;
+    border-radius: rem(5px)
+;
+    margin: rem(10px)
+ rem(10px)
+ rem(0px)
+ rem(20px)
+;
+    padding: rem(5px)
+;
+    font-size: rem(16px)
+;
     color: rgb(55, 62, 66);
     font-family: 'robotoregular', Arial, sans-serif;
 }
@@ -104,14 +129,18 @@
 
 
 .button__admin {
-    width: 120px;
-    height: 45px;
+    width: rem(120px)
+;
+    height: rem(45px)
+;
     background: #00bfa5;
     color: rgb(255, 255, 255);
     line-height: 2.257;
     border: none;
-    border-radius: 6px;
-    margin-left: 30px;
+    border-radius: rem(6px)
+;
+    margin-left: rem(30px)
+;
 }
 
 
@@ -131,42 +160,58 @@
 .admin-content__input,
 .admin-content__textarea {
     border: none;
-    border-radius: 7px;
-    margin-bottom: 20px;
-    margin-left: 30px;
+    border-radius: rem(7px)
+;
+    margin-bottom: rem(20px)
+;
+    margin-left: rem(30px)
+;
 }
 
 .admin-content__input {
-    width: 300px;
-    height: 45px;
-    padding-left: 20px;
+    width: rem(300px)
+;
+    height: rem(45px)
+;
+    padding-left: rem(20px)
+;
 }
 
 .admin-content__textarea {
-    width: 500px;
-    height: 165px;
-    padding-left: 20px;
-    padding-top: 15px;
+    width: rem(500px)
+;
+    height: rem(165px)
+;
+    padding-left: rem(20px)
+;
+    padding-top: rem(15px)
+;
 }
 
 placeholder {
-    margin-left: 20px;
+    margin-left: rem(20px)
+;
 }
 
 
 //admin3
 
 .admin-content__download-image {
-	 padding-left: 30px;
+	 padding-left: rem(30px)
+;
 	 display: flex;
     align-items: center;
-    margin-bottom: 160px;
+    margin-bottom: rem(160px)
+;
 }
 
 .download-image {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+    width: rem(40px)
+;
+    height: rem(40px)
+;
+    margin-right: rem(10px)
+;
     
 }
 
@@ -177,14 +222,19 @@ color: rgba(0, 191, 165, 0.702);
 
 
 /*.send-message__window {
-	width: 280px;
-	height: 110px;
-	border-radius: 10px;
+	width: rem(280px)
+;
+	height: rem(110px)
+;
+	border-radius: rem(10px)
+;
 }
 
 .button-close {
-	width: 105px;
-	height: 40px;
+	width: rem(105px)
+;
+	height: rem(40px)
+;
 	background: #00bfa5;
 
 }
@@ -193,5 +243,6 @@ color: rgba(0, 191, 165, 0.702);
   color: rgba(55, 62, 66, 0.8);
   line-height: 2.257;
   text-align: center;
-  border-radius: 5px;
+  border-radius: rem(5px)
+;
 } */

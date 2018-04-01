@@ -38,25 +38,45 @@ a {
 }
 
 h1 {
-    font-size: 63px;
+    font-size: rem(63px);
     font-family: 'bernier_regularregular', Arial, sans-serif;
     line-height: 1.048;
+
+     @include phones() {
+        font-size: rem(35px);
+    }
 }
 
 h3 {
-    font-size: 35px;
+    font-size: rem(35px);
     font-family: 'robotoregular', Arial, sans-serif;
     line-height: 1.171;
+
+     @include phones() {
+        font-size: rem(21px);
+    }
 }
 
 h4 {
-    font-size: 28px;
+    font-size: rem(28px);
     font-family: 'robotoregular', Arial, sans-serif;
-
 }
 
 h5 {
-    font-size: 16px;
+    font-size: rem(16px);
     font-family: 'robotoregular', Arial, sans-serif;
     line-height: 1.5;
+
+    @include tablets() {
+       font-size: rem(14px);
+    }
+
+     @include phones() {
+        font-size: rem(14px);
+    }
 }
+
+
+
+
+

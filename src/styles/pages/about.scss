@@ -1,51 +1,168 @@
 //центральный блок левая часть
-.about__title {
+.about-title {
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(55, 62, 66);
+
+    @include tv() {
+        width: rem(400px);
+        align-items: flex-start;
+    }
+
+    @include tablets() {
+        padding-top: rem(40px);
+        padding-bottom: rem(40px);
+    }
+
+    @include phones() {
+        height: rem(85px);
+    }
 }
 
+.svg-text__about-about {
+    fill: #e6e5e0;
+    position: absolute;
+    width: 28%;
+
+    @include tablets() {
+        width: 40%;
+    }
+
+    @include phones() {
+        width: 60%;
+    }
+}
+
+.about-title__text {
+    z-index: 10;
+    margin: rem(0px);
+}
+
+
+
+
 .about__section_left {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: rem(110px);
+    padding-right: rem(80px);
     background-color: #efeee9;
+
+    @include tv() {
+        padding-left: rem(0px);
+        padding-right: rem(0px);
+        padding-bottom: rem(20px);
+        flex-direction: row;
+    }
+
+    @include tablets() {
+        padding-left: rem(0px);
+        padding-right: rem(0px);
+        padding-bottom: rem(20px);
+    }
+
+    @include phones() {
+        padding-left: rem(0px);
+        padding-right: rem(0px);
+        padding-bottom: rem(20px);
+    }
 }
 
 .about__myphoto {
     background-image: url('./../images/photo.jpg');
-    width: 445px;
-    height: 390px;
+    width: rem(445px);
+    height: rem(390px);
+    margin-bottom: rem(30px);
+
+    @include phones() {
+        width: rem(320px);
+        height: rem(286px);
+        background-image: url('./../images/photo__mobile.jpg');
+        background-repeat: no-repeat;
+    }
 }
 
+.about-container__lefttext {
+    margin-top: rem(25px);
+    @include phones() {
+        padding-left: rem(10px);
+        padding-right: rem(10px);
+    }
+}
+
+
 .about__text-left {
-    margin-bottom: 40px;
+    color: rgb(69, 90, 100);
+}
+
+
+.about__title-left {
+
+    text-transform: uppercase;
+    font-family: 'bernier_regularregular', Arial, sans-serif;
+}
+
+
+
+
+.about__text-left {
+    margin-bottom: rem(10px);
 }
 
 //центральный блок правая часть
 .about__title-small,
 .about__title-small_up,
 .about__title-small_down {
-    font-size: 35px;
+    font-size: rem(35px);
     display: flex;
     color: rgb(69, 90, 100);
     justify-content: center;
     align-items: center;
     font-family: 'bernier_regularregular', Arial, sans-serif;
+
+     @include phones() {
+        width: 100%;
+    }
+
+
+    @include phones() {
+        font-size: rem(21px);
+    }
 }
 
-.about__title-small {
-    padding-top: 30px;
-}
 
 .about__title-small_down {
-    padding-top: 0px;
+    padding-top: rem(0px);
 }
-
-
 
 .about__section_right {
     background-color: #eeebdf;
+    flex-direction: column;
+    @include tablets() {
+        padding-top: 20px;
+    }
+
+    @include phones() {
+        padding-left: rem(10px);
+        padding-right: rem(10px);
+        padding-bottom: 30px;
+    }
+}
+
+.about-container__righttext {
+    @include tablets() {
+        width: 596px;
+        text-align: center;
+    }
+}
+
+.about__diagram {
+    padding-top: rem(50px);
+    @include tablets() {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: rem(40px);
+    }
 }
 
 .frontend__diagram_skill,
@@ -53,43 +170,91 @@
 .workflow__diagram_skill {
     color: rgb(69, 90, 100);
     line-height: 1.143;
-    padding: 40px 0px 0px 40px;
+    padding-left: rem(40px);
+
+    @include phones() {
+        display: flex;
+        justify-content: center;
+        padding-left: rem(0px);
+    }
 }
 
+.backend__diagram_skill,
+.workflow__diagram_skill {
+    padding-top: rem(35px);
+}
 
 //общее
-.about__container {
+.about-container {
     display: flex;
+    height: rem(835px);
+
+    @include tablets() {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    @include phones() {
+        flex-direction: column;
+        height: 100%;
+    }
 }
 
 .about__info {
     display: flex;
     flex-direction: column;
+
+
+    @include tv() {
+        justify-content: center;
+        align-items: center;
+        width: rem(480px);
+    }
+
+
+    @include tablets() {
+        align-items: center;
+        width: rem(470px);
+    }
 }
 
 .about__section_left,
 .about__section_right {
     display: flex;
     width: 50%;
-    flex-direction: column;
+
+    @include tablets() {
+        width: 100%;
+        align-items: center;
+    }
+
+    @include phones() {
+        width: 100%;
+    }
 }
 
 .gorizont__line {
-    width: 22px;
-    height: 5px;
+    width: rem(22px);
+    height: rem(5px);
     background-color: rgb(55, 62, 66);
-    margin: 20px;
+    margin: rem(10px);
     opacity: 0.2;
 }
 
 
 
 h5.about__text-right {
-    padding-left: 40px;
-    padding-top: 30px;
+    padding-left: rem(40px);
+    padding-top: rem(20px);
+
+    @include phones() {
+        padding-left: rem(0px);
+    }
 }
 
-.about__text {
+
+
+.about__text-right {
     color: rgb(69, 90, 100);
 }
 
@@ -98,24 +263,18 @@ h5.about__text-right {
 .contacts-card__mail,
 .contacts-card__phone,
 .contacts-card__adress {
-    font-size: 16px;
+    font-size: rem(16px);
     font-family: 'robotoregular', Arial, sans-serif;
     text-align: left;
     z-index: 31;
 }
 
-
-
-
-
 .diagram_item {
-    font-size: 14px;
+    font-size: rem(14px);
     font-family: 'robotoregular', Arial, sans-serif;
     color: rgb(0, 191, 165); //line-height: 2.293;
     //text-align: center;
 }
-
-
 
 
 //карта контактов
@@ -124,53 +283,83 @@ h5.about__text-right {
 .contacts-card__phone,
 .contacts-card__adress {
     color: rgba(71, 75, 87, 0.8);
-    margin: 20px 0px; //line-height: 6.195;
+    margin: rem(20px) rem(0px); //line-height: 6.195;
     display: flex;
 }
 
 .contacts-card__icon {
-    margin-right: 10px;
+    margin-right: rem(10px);
 }
 
 .contacts-card__info {
-    margin-left: 40px;
+    margin-left: rem(40px);
 }
 
 .contacts-card {
-    width: 390px;
-    height: 290px;
+    width: rem(390px);
+    height: rem(290px);
     background-color: rgb(255, 255, 255);
     opacity: 0.851; //position: absolute;
-    border-radius: 5px;
+    border-radius: rem(5px);
     z-index: 20;
+    padding-left: rem(15px);
+    padding-top: rem(35px);
+
+    @include tablets() {
+        width: rem(348px);
+        height: rem(287px);
+    }
+
+    @include phones() {
+        width: 100%;
+        height: rem(260px);
+        padding-left: rem(0px);
+    }
 }
 
 .contacts-card__title {
     font-family: 'bernier_regularregular', Arial, sans-serif;
-    font-size: 35px;
+    font-size: rem(35px);
     color: rgb(55, 62, 66);
     line-height: 1.171;
 }
 
 
 .map {
-    width: 1200px;
-    height: 970px;
+    width: 100%;
+    height: rem(975px);
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablets() {
+        height: rem(1024px);
+    }
+
+    @include phones() {
+        align-items: flex-start;
+    }
 }
 
 //slill diagram
 .frontend__diagram,
 .backend__diagram,
 .workflow__diagram {
-    margin-left: 30px;
+    margin-left: rem(30px);
+
+    @include phones() {
+        padding-left: rem(5px);
+        padding-right: rem(5px);
+        margin-left: rem(0px);
+    }
 }
+
+
+
 
 .circles {
     fill: none;
-    stroke-width: 15;
+    stroke-width: 20;
 }
 
 .circle__first {
@@ -186,9 +375,16 @@ h5.about__text-right {
 .item {
     position: relative;
     display: inline-block;
-    width: 110px;
-    height: 110px;
-    margin: 10px;
+    width: rem(110px);
+    height: rem(110px);
+    margin: rem(10px) rem(20px) rem(0px) rem(10px);
+}
+
+.item_center-mobile {
+    @include phones() {
+        display: block;
+        left: 25%;
+    }
 }
 
 .diagram_item {
@@ -197,7 +393,7 @@ h5.about__text-right {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 14px;
+    font-size: rem(14px);
     font-family: Arial, Helvetica, sans-serif;
     color: #1bb696;
     font-weight: bold;

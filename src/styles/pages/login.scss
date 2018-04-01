@@ -2,29 +2,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: rem(700px);
 }
 
-h3.login__title,
-h5.login__question {
-    color: #fff;
+.login-title {
+display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(40px);
 }
 
-.login__title {
-	margin-bottom: 40px;
+.login-title__text {
+    font-family: 'bernier_regularregular', Arial, sans-serif;
+    color: rgb(69, 90, 100);
 }
 
-.login__block {
-    width: 380px;
-    height: 407px; //background-color: rgb(28, 31, 41);
-    //opacity: 0.502
-    padding: 40px 20px 0px 20px;
+
+
+
+.login-block {
+    width: rem(380px);
+    height: rem(395px);
+    border-radius: rem(5px);
+    background-color: rgba(252, 252, 252, 0.8);
 }
 
 .login__field,
 .login__password {
-    width: 340px;
-    height: 45px;
-    margin-bottom: 20px;
+
+    width: rem(340px);
+    height: rem(45px);
+    margin-bottom: rem(20px);
+    border-radius: rem(5px);
+}
+
+.login-icon,
+.password-icon {
+    width: rem(45px);
+    height: rem(45px);
+    fill: #c4cbcd;
+    background-color: #f0efe9;
 }
 
 .login__title,
@@ -35,11 +52,11 @@ h5.login__question {
 }
 
 .login__checkbox_block {
-	align-items: center;
+    align-items: center;
 }
 
 .login__checkbox {
-	margin: 10px;
+    margin: rem(10px);
 }
 
 .login__button_block {
@@ -48,24 +65,44 @@ h5.login__question {
 
 .login__tomain,
 .login__tocomein {
-    width: 190px;
-    height: 45px;
-    margin: 0px;
+    width: rem(190px);
+    height: rem(45px);
+    margin: rem(0px);
+}
+
+.form__input-elemrow {
+    width: 100%;
+    text-align: center;
+}
+
+.form__field-title,
+.form__btn {
+    font-size: rem(16px);
+    font-family: 'robotoregular', Arial, sans-serif;
+    color: rgba(69, 90, 100, 0.8);
 }
 
 
-//checkbox
+.login__question {
+    color: rgba(69, 90, 100, 0.8);
+    font-weight: bold;
+}
 
+
+
+
+
+//checkbox
 .checkbox {
     display: none;
 }
 
 .checkbox-custom {
     position: relative;
-    width: 17px;
-    height: 17px;
-    border-radius: 3px;
-    margin-right: 10px;
+    width: rem(20px);
+    height: rem(20px);
+    border-radius: rem(3px);
+    margin-right: rem(10px);
     background: #fff;
 }
 
@@ -84,16 +121,17 @@ h5.login__question {
     content: '\2714';
     display: block;
     position: absolute;
-    top: 2px;
-    right: 2px;
-    bottom: 2px;
-    left: 2px;
+    top: rem(2px);
+    right: rem(2px);
+    bottom: rem(2px);
+    left: rem(2px);
     color: #e35028;
-    border-radius: 2px;
+    border-radius: rem(2px);
+    background: #00bfa5;
 }
 
 .checkbox__label {
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
 }
 
 
@@ -101,25 +139,42 @@ h5.login__question {
 .form__controls {
     display: inline-block;
     text-align: left;
-    margin-top: 10px;
+    margin-top: rem(10px);
 }
 
 .form__radio {
     position: relative;
     display: inline-block;
     cursor: pointer;
+    width: rem(150px);
 }
 
-.form__input-radio {
+.login__radio {
     position: absolute;
     visibility: hidden;
 }
 
 .radio2 {
-    padding-left: 17px;
+    padding-left: rem(17px);
 }
 
-.form__input-radio:not(checked)+.form__field-title .form__btn:after {
+.form__btn {
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: rem(16px);
+    height: rem(16px);
+    border-radius: 50%;
+    border: rem(1px) solid #cacaca;
+    margin-right: rem(5px);
+    margin-bottom: rem(5px);
+    background: #fff;
+}
+
+
+.login__radio:not(checked)+.form__field-title .form__btn:after {
     content: '';
     position: absolute;
     top: 50%;
@@ -127,29 +182,28 @@ h5.login__question {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    width: 10px;
-    height: 10px;
+    width: rem(10px);
+    height: rem(10px);
     border-radius: 50%;
-    background-color: #e35028;
+    //background-color: #e35028;
+    background-color: #00bfa5;
     transition: 0.3s;
     opacity: 0;
 }
 
-.form__input-radio:checked+.form__field-title .form__btn:after {
+.login__radio:checked+.form__field-title .form__btn:after {
     opacity: 1;
 }
 
-.form__radio-text {
+.form__btn {
     display: inline-block;
     vertical-align: middle;
-    font-size: 16px;
-    font-family: 'robotoregular', Arial, sans-serif;
-    margin-right: 5px;
-    color: rgba(255, 255, 255, 0.8);
-  line-height: 1.5;
-}
+    font-size: rem(14px);
+    margin-right: rem(5px);
+} 
 
-.form__input-radio:checked+.form__radio-text {
+.login__radio:checked+.form__radio-text {
+    //color: #00bfa5;
     color: red;
 }
 

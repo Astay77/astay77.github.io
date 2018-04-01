@@ -11,112 +11,132 @@
     <script src="./assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <div class="wrapper"><!DOCTYPE html>
-      <html>
-        <head>
-          <meta charset="utf-8">
-          <title>Обо мне</title>
-          <meta content="" name="description">
-          <meta content="" name="keywords">
-          <meta content="width=device-width, initial-scale=1" name="viewport">
-          <meta content="ie=edge" http-equiv="x-ua-compatible">
-          <link rel="stylesheet" href="./assets/styles/app.min.css">
-          <script src="./assets/scripts/bundle.js" defer></script>
-        </head>
-        <body>
-          <div class="wrapper">
-            <div class="header__about__works"><a class="menu-hamburger" href="#"><img class="menu-hamburger__icon" src="./assets/images/hamburger.svg" alt="menu hamburger"></a>
-              <div class="header-container">
-                <div class="header__block">
-                  <div class="header__avatar"></div>
-                  <div class="header-block__name">
-                    <h3>Александр Салтыков</h3>
-                  </div>
-                  <div class="header-block__title">
-                    <h5>Личный сайт веб разработчика</h5>
-                  </div>
-                  <div class="header__soc">
-                    <ul class="header__soc-list">
-                      <li class="header__soc-item"><a class="header__soc-link" href="https://vk.com" title="VK">
-                          <svg class="header__item-icon"><use xlink:href="./assets/images/sprite-welcome.svg#vk"></use> </svg></a></li>
-                      <li class="header__soc-item"><a class="header__soc-link" href="https://github.com/Astay77" title="GitHub">
-                          <svg class="header__item-icon"><use xlink:href="./assets/images/sprite-welcome.svg#github"></use></svg></a></li>
-                      <li class="header__soc-item"><a class="header__soc-link" href="https://www.linkedin.com" title="Link">
-                          <svg class="header__item-icon"><use xlink:href="./assets/images/sprite-welcome.svg#in"></use></svg></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div><a class="page-down" href="#"><img class="page-down__icon" src="./assets/images/arrow_down.svg" alt="page down"></a>
+    <div class="wrapper">
+      <div class="header__about-works"><a class="menu-hamburger" href="#"><img class="menu-hamburger__icon" src="./assets/images/hamburger.svg" alt="menu hamburger"></a>
+        <div class="header-container">
+          <div class="header__block">
+            <svg class="svg-text__portfolio"><use xlink:href="./assets/images/text.svg#portfolio-header"></use></svg>
+            <div class="header__avatar"></div>
+            <div class="header-block__name">
+              <h3>Александр Салтыков</h3>
+            </div>
+            <div class="header-block__title">
+              <h5>Личный сайт веб разработчика</h5>
+            </div>
+            <div class="header__soc">
+              <ul class="header__soc-list">
+                <li class="header__soc-item"><a class="header__soc-link" href="https://vk.com" title="VK">
+                    <svg class="header__item-icon"><use xlink:href="./assets/images/sprite-welcome.svg#vk"></use> </svg></a></li>
+                <li class="header__soc-item"><a class="header__soc-link" href="https://github.com/Astay77" title="GitHub">
+                    <svg class="header__item-icon"><use xlink:href="./assets/images/sprite-welcome.svg#github"></use></svg></a></li>
+                <li class="header__soc-item"><a class="header__soc-link" href="https://www.linkedin.com" title="Link">
+                    <svg class="header__item-icon"><use xlink:href="./assets/images/sprite-welcome.svg#in"></use></svg></a></li>
+              </ul>
             </div>
           </div>
-        </body>
-      </html>
-      <section class="section-myworks__title">
-        <div class="gorizont__line"></div>
-        <h1>Мои работы</h1>
-        <div class="gorizont__line"></div>
-      </section>
-      <section class="centr__block">
-        <div class="centr__block_left">
-          <div class="centr__block_title">
-            <h3>Сайт школы онлайн образования </h3>
+        </div><a class="page-down" href="#"><img class="page-down__icon" src="./assets/images/arrow_down.svg" alt="page down"></a>
+      </div>
+      <section class="myworks-title">
+        <div class="myworks-title__bg"><img class="myworks-title__bg-svg" src="./assets/images/bg.svg" alt="bg"></div>
+        <div class="myworks-title__block">
+          <svg class="svg-text__works"><use xlink:href="./assets/images/text.svg#works-header"></use></svg>
+          <div class="myworks-title__block-content">   
+            <div class="gorizont__line"></div>
+            <h1 class="myworks-title__text">Мои работы</h1>
+            <div class="gorizont__line"></div>
           </div>
-          <div class="centr__block_tehnology">
-            <h5>HTML, CSS, JAVASCRIPT</h5>
-          </div>
-          <div class="centr__block_button">
-            <h5>Посмотреть сайт</h5>
-          </div>
-        </div>
-        <div class="centr__block_right"><!--div.centr__block_slaider-->
-<!--	include ../common/slider.pug-->
         </div>
       </section>
-      <section class="block__reviews">
-        <div class="block__reviews_title">
-          <h3>Что обо мне говорят</h3>
+      <section class="portfolio-block">
+        <div class="block-left">
+          <div class="block-left__container">
+            <div class="block-title">
+              <div class="gorizont__line"></div>
+              <h3 class="block-left__text">Сайт школы онлайн </h3>
+              <div class="gorizont__line"></div>
+            </div>
+            <h3 class="block-left__text">образования                     </h3>
+            <div class="separate-line"></div>
+            <div class="block-tehnology">
+              <h5 class="block-tehnology__text">HTML, CSS, JAVASCRIPT</h5>
+            </div>
+            <div class="separate-line"></div>
+            <div class="block-left__button">
+              <h5 class="button__see-site">Посмотреть сайт</h5>
+            </div>
+          </div>
         </div>
-        <div class="block__reviews_left">
-          <div class="reviews__avatar">
-            <div class="reviews__avatar_photo"></div>
+        <div class="block-right"><!--div.centr__block_slaider-->
+<!--    include ../common/slider.pug-->
+          <div class="block-right__visual"></div>
+          <div class="block-right__button"></div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="reviews-title__container">
+          <div class="reviews-title">
+            <svg class="svg-text__about"><use xlink:href="./assets/images/text.svg#about-header"></use></svg>
+            <div class="gorizont__line"></div><span class="reviews-title__text">Что обо мне </span>
+            <div class="gorizont__line"></div>
+          </div><span class="reviews-title__text">говорят</span>
+        </div>
+        <div class="reviews-container">
+          <div class="reviews-left">
+            <div class="quotes-icon"><img class="quotes-icon__item" src="./assets/images/quotes.png" alt="quotes"></div>
+            <div class="reviews-text"> 
+              <h5 class="reviews-text__info">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!!! 2 месяца только самых тяжёлых испытаний и бессонных ночей!</h5>
+            </div>
+            <div class="reviews-avatar">
+              <div class="reviews-avatar__Left"></div>
+            </div>
+            <div class="reviews-name">
+              <h5 class="reviews-name__text">Ковальчук Дмитрий</h5>
+            </div>
+            <div class="reviews-job">
+              <h5 class="reviews-job__text">основатель LoftSchool </h5>
+            </div>
           </div>
-          <div class="reviews__text">
-            <h5>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!!! 2 месяца только самых тяжёлых испытаний и бессонных ночей!</h5>
-          </div>
-          <div class="reviews__name">
-            <h5>Ковальчук Дмитрий</h5>
-          </div>
-          <div class="reviews__job">
-            <h5>- основатель LoftSchool </h5>
+          <div class="reviews-right">
+            <div class="quotes-icon"><img class="quotes-icon__item" src="./assets/images/quotes.png" alt="quotes"></div>
+            <div class="reviews-text">
+              <h5 class="reviews-text__info">Этот код выдержит любые испытания. Только пожалуйста, не загружйте сайт на слишком старых браузерах!</h5>
+            </div>
+            <div class="reviews-avatar">
+              <div class="reviews-avatar__Right"></div>
+            </div>
+            <div class="reviews-name">
+              <h5 class="reviews-name__text">Сабанцев Владимир</h5>
+            </div>
+            <div class="reviews-job">
+              <h5 class="reviews-job__text">преподаватель</h5>
+            </div>
           </div>
         </div>
-        <div class="block__reviews_left">
-          <div class="reviews__avatar">
-            <div class="reviews__avatar_photo"></div>
-          </div>
-          <div class="reviews__text">
-            <h5>Этот код выдержит любые испытания. Только пожалуйста, не загружйте сайт на слишком старых браузерах!</h5>
-          </div>
-          <div class="reviews__name">
-            <h5>Сабанцев Владимир</h5>
-          </div>
-          <div class="reviews__job">
-            <h5>- преподаватель</h5>
-          </div>
-          <form class="feedback__form" method="POST" action="/ register">
-            <div class="feedback__title">
-              <h2>Связаться со мной</h2>
+        <div class="feedback-form__container">
+          <form class="feedback-form" method="POST" action="/ register">
+            <div class="feedback-title">
+              <div class="gorizont__line"></div>
+              <h3 class="feedback-title__text">Связаться со мной</h3>
+              <div class="gorizont__line"></div>
             </div>
             <label for="feedback__name"></label>
-            <input class="feedback__field" name="feedback__name" id="feedback__name" placeholder="Ваше имя">
+            <input class="feedback-field" name="feedback__name" id="feedback__name" placeholder="Имя">
             <label for="feedback__email"></label>
-            <input class="feedback__field" name="feedback__email" id="feedback__email" placeholder="Ваш email">
+            <input class="feedback-field" name="feedback__email" id="feedback__email" placeholder="Email">
             <label for="feedback__message"></label>
-            <textarea name="feedback__message" id="feedback__message" placeholder="Ваше сообщение"></textarea>
-            <button>Отправить</button>
-            <button>Очистить</button>
+            <textarea class="textarea-field" name="feedback__message" id="feedback__message" placeholder="Ваше сообщение"></textarea>
+            <div class="form-button">
+              <ul class="form-button__block">
+                <li class="form-button__item">
+                  <button class="form-button__button" type="submit">Отправить</button>
+                </li>
+                <li class="form-button__item">
+                  <button class="form-button__button" type="reset">Очистить</button>
+                </li>
+              </ul>
+            </div>
           </form>
-        </div>
+        </div><a class="page-up" href="#"><img class="page-up__icon" src="./assets/images/arrow_down.svg" alt="page down"></a>
       </section>
       <footer class="footer__big"> 
         <div class="footer__big_container">
@@ -133,11 +153,11 @@
               <div class="footer__soc">
                 <ul class="footer__soc-list">
                   <li class="footer__soc-item"><a class="footer__soc-link" href="https://vk.com" title="VK">
-                      <svg class="footer__item-icon"><use xlink:href="./assets/images/footer-sprite.svg#vk"></use> </svg></a></li>
+                      <svg class="footer__item-icon"><use xlink:href="./assets/images/sprite-footer.svg#vk"></use> </svg></a></li>
                   <li class="footer__soc-item"><a class="footer__soc-link" href="https://github.com/Astay77" title="GitHub">
-                      <svg class="footer__item-icon"><use xlink:href="./assets/images/footer-sprite.svg#github"></use></svg></a></li>
+                      <svg class="footer__item-icon"><use xlink:href="./assets/images/sprite-footer.svg#github"></use></svg></a></li>
                   <li class="footer__soc-item"><a class="footer__soc-link" href="https://www.linkedin.com" title="Link">
-                      <svg class="footer__item-icon"><use xlink:href="./assets/images/footer-sprite.svg#in"></use></svg></a></li>
+                      <svg class="footer__item-icon"><use xlink:href="./assets/images/sprite-footer.svg#in"></use></svg></a></li>
                 </ul>
               </div>
             </div>

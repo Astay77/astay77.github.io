@@ -5,13 +5,19 @@ block variables
 
 block content
 	div.login__container
-		div.login__block
-			div.login__title
-				h3 Авторизуйтесь
+		div.login-block
+			div.login-title
+				div.gorizont__line 
+				h3.login-title__text Авторизуйтесь
+				div.gorizont__line 
 			label(for="login__field")
-			input.login__field(name="login__field" id="login__field" placeholder="Логин")
+				<!--svg.login-icon-->
+						<!--<use xlink:href="./assets/images/icon.svg#login"></use> -->
+				input.login__field(name="login__field" id="login__field" placeholder="Логин")
 			label(for="login__password")
-			input.login__password(name="login__password" id="login__password" placeholder="Пароль")
+				<!--svg.password-icon-->
+						<!--<use xlink:href="./assets/images/icon.svg#password"></use>-->
+				input.login__password(name="login__password" id="login__password" placeholder="Пароль")
 			div.form__input-elemrow
 				label.checkbox__label(id="i__human")
 					input.checkbox(type="checkbox" name="i__human"  id="i__human" value="1")
@@ -24,16 +30,19 @@ block content
 					label.form__radio.radio1(for="login__radio")
 						input.login__radio(name="login__radio" type="radio" id="login__radio" value="Да")
 						span.form__field-title
-						span.form__btn Да
+							span.form__btn Да
 					label.form__radio.radio2(for="login__radio2")
 						input.login__radio(name="login__radio" type="radio" id="login__radio2" value="Не уверен")
 						span.form__field-title
-						span.form__btn Не уверен
-			div.login__button_block
-				button.login__tomain
-					h5 На главную
-				button.login__tocomein
-					h5 Войти
+							span.form__btn Не уверен
+			nav.welcome-nav
+				ul.welcome-nav__block
+					li.welcome-nav__item
+						a.welcome__item(href='./index.html' title='main') 
+							h5.welcome-button На главную
+					li.welcome-nav__item
+						a.welcome__item(href='#' title='sign in')
+							h5.welcome-button Войти
 	include ./../common/footer__small.pug
 
 
