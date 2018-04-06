@@ -15,23 +15,65 @@
     }
 }
 
+.welcome-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(750px);
 
-.welcome-wrap:hover .welcome__container,
-.welcome-wrap.hover .welcome__container {
+    @include tablets() {
+        height: rem(950px);
+    }
+
+@include phones() {
+        height: rem(450px);
+    }
+
+}
+
+
+.welcome-wrap:hover .welcome__flipper,
+.welcome-wrap.hover .welcome__flipper {
     transform: rotateY(180deg);
 }
 
-.welcome-wrap, .welcome-block__front, .login-block {
+
+.welcome-block__front,
+.login-block {
+    width: rem(380px);
+    height: rem(395px);
+    border-radius: rem(10px);
+    background-color: rgba(252, 252, 252, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include tablets() {
+        width: rem(350px);
+    }
+
+    @include phones() {
+        width: rem(300px);
+    }
+}
+
+
+.welcome-wrap, .login-block, .welcome-block__front  {
     width: 380px;
     height: 395px;
-} 
 
-/*.welcome-wrap, .login-block, .welcome-block__front  {
-    width: 380px;
-    height: 395px;
-}*/
+    @include tablets() {
+        width: rem(350px);
+    }
 
-.welcome__container {
+    @include phones() {
+        width: rem(300px);
+    }
+}
+
+.welcome__flipper {
     transition: 0.6s;
     transform-style: preserve-3d;
     position: relative;
@@ -46,24 +88,28 @@
 }
 
 .welcome-block__front {
-   z-index: 2;
-    transform: rotateY(0deg);
+    z-index: 2;
+    transform: rotateY(0deg); 
     //transform: rotateY(180deg);
 }
 
 .login-block {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); 
     //transform: rotateY(0deg);
-    z-index: 2;//удалить
-} 
+    //z-index: 2;//удалить
+}
 
 
 
-.welcome__container {
+.welcome__flipper {
     width: rem(380px);
     height: rem(395px);
     background-color: #e7edef;
     border-radius: rem(10px);
+
+    @include tablets() {
+        width: rem(350px);
+    }
 
     @include phones() {
         width: rem(300px);
@@ -173,7 +219,7 @@
     @include phones() {
         position: static;
         width: 100%;
-        height: rem(80px);
+        height: rem(60px);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -188,6 +234,12 @@
     height: rem(45px);
     border: rem(1px) solid #fff;
     border-radius: rem(4px);
+    cursor: pointer;
+}
+
+.welcome__login:hover {
+    color: #00bfa5;
+    background: #fff;
 }
 
 .welcome__soc {
@@ -209,4 +261,247 @@
 .welcome__item-icon:hover {
     fill: #00bfa5;
     cursor: pointer;
+}
+
+
+
+// login scss
+
+.login__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(700px);
+}
+
+.login-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(40px);
+    margin-top: 40px;
+}
+
+.login-title__text {
+    font-family: 'bernier_regularregular', Arial, sans-serif;
+    color: rgb(69, 90, 100);
+}
+
+.form-field {
+    display: flex;
+}
+
+
+.login__field,
+.login__password {
+    width: rem(295px);
+    height: rem(45px);
+    margin-bottom: rem(20px);
+    border-radius: rem(0px) rem(7px) rem(7px) rem(0px);
+    border: 1px solid #fff;
+    outline: none;
+    resize: none;
+    padding-left: rem(15px);
+
+    @include phones() {
+        width: rem(210px);
+    }
+}
+
+.login__field:focus,
+.login__password:focus {
+    border: 1px solid #00bfa5;
+}
+
+
+.icon-block {
+    background-color: #f0efe9;
+    height: rem(45px);
+    width: rem(45px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: rem(7px) rem(0px) rem(0px) rem(7px);
+}
+
+.login-icon,
+.password-icon {
+    width: rem(15px);
+    height: rem(15px);
+    fill: #c4cbcd;
+}
+
+
+.login__title,
+.login__question,
+.login__checkbox_block {
+    display: flex;
+    justify-content: center;
+}
+
+.login__checkbox_block {
+    align-items: center;
+}
+
+.login__checkbox {
+    margin: rem(10px);
+}
+
+.login__button_block {
+    display: flex;
+}
+
+.login__tomain,
+.login__tocomein {
+    width: rem(190px);
+    height: rem(45px);
+    margin: rem(0px);
+}
+
+.form__input-elemrow {
+    width: 100%;
+    text-align: center;
+}
+
+.form__field-title,
+.form__btn {
+    font-size: rem(16px);
+    font-family: 'robotoregular', Arial, sans-serif;
+    color: rgba(69, 90, 100, 0.8);
+}
+
+
+.login__question {
+    color: rgba(69, 90, 100, 0.8);
+    font-weight: bold;
+    margin-top: rem(10px);
+    margin-bottom: (10px);
+}
+
+
+
+//checkbox
+.checkbox {
+    display: none;
+}
+
+.checkbox-custom {
+    position: relative;
+    width: rem(20px);
+    height: rem(20px);
+    border-radius: rem(3px);
+    margin-right: rem(10px);
+    background: #fff;
+    border: 1px solid #00bfa5;
+    outline: none;
+    resize: none;
+}
+
+.checkbox-custom,
+.checkbox__label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.checkbox__label {
+    width: 100%;
+    cursor: pointer;
+}
+
+.checkbox:checked+.checkbox-custom::before {
+    content: '';
+    display: inline-block;
+    border-radius: rem(2px);
+    background: url('./../images/check.svg') no-repeat 50% #00bfa5;
+    width: rem(19px);
+    height: rem(19px);
+}
+
+.checkbox__label {
+    margin-bottom: rem(10px);
+}
+
+
+//radio
+.form__controls {
+    margin-bottom: rem(35px);
+    width: 50%;
+    display: inline-block;
+    text-align: left;
+    margin-top: rem(10px);
+
+    @include phones() {
+        width: 100%;
+        margin-top: rem(0px);
+        text-align: center;
+    }
+}
+
+.form__controls-title {
+    margin-bottom: rem(8px);
+}
+
+.form__radio {
+    position: relative;
+    display: inline-block;
+}
+
+.form__input-radio {
+    position: absolute;
+    visibility: hidden;
+}
+
+.radio2 {
+    padding-left: rem(17px);
+}
+
+.form__btn {
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: rem(18px);
+    height: rem(18px);
+    border-radius: 50%;
+    border: rem(1px) solid #cacaca;
+    margin-right: rem(5px);
+}
+
+.form__input-radio:not(checked)+.form__radio-text .form__btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: rem(0px);
+    height: rem(0px);
+    border-radius: 50%;
+    background-color: #00bfa5;
+    transition: 0.3s;
+}
+
+.form__input-radio:checked+.form__radio-text .form__btn:after {
+    width: rem(10px);
+    height: rem(10px);
+}
+
+.form__radio-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: rem(14px);
+    font-family: 'robotoregular', Arial, sans-serif;
+    margin-right: rem(5px);
+    color: rgba(69, 90, 100, 0.8);
+}
+
+.form__input-radio:checked+.form__radio-text {
+    color: #00bfa5;
+}
+
+.data__author {
+    background-color: transparent;
+    opacity: 1;
 }

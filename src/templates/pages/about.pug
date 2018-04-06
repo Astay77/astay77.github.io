@@ -8,10 +8,8 @@ block content
 	
 	include ./../common/header__about__works.pug
 	
-	div.about-container
-
+	section.about-container
 		section.about__section_left
-			
 			div.about-title
 				svg.svg-text__about-about
 					<use xlink:href="./assets/images/text.svg#about-header"></use>
@@ -95,6 +93,7 @@ block content
 						span.diagram_item Bower
 					
 	section.map
+		div.map-container(id="map") 
 		div.contacts-card
 			div.about__title-small
 				div.gorizont__line
@@ -114,6 +113,7 @@ block content
 					img.contacts-card__icon(src="./assets/images/map_marker.svg" alt="skype")
 					h5 г.Москва
 	include ./../common/footer.pug
+	
 
 
 

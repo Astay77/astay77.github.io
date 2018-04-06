@@ -11,6 +11,7 @@
 
     @include phones() {
         height: 100vh;
+        margin: -30%;
     }
 }
 
@@ -97,7 +98,7 @@ h5.header-blog__title {
         position: absolute;
         top: 50%;
         left: 100%;
-        z-index: -1;
+        z-index: 10;
         -webkit-transform: translateX(-70%);
         transform: translateX(-70%);
         width: 4.375rem;
@@ -113,31 +114,57 @@ h5.header-blog__title {
 
     @include tablets() {
         display: inline-block;
-        top: 26%;
+        top: 36%;
     }
 
     @include phones() {
         display: inline-block;
-        top: 22%;
+        top: 21%;
     }
 }
 
 .blog-container {
     display: flex;
-    margin-bottom: rem(150px);
-    margin-top: rem(60px);
-    margin-left: rem(40px);
+    padding-bottom: rem(150px);
+    padding-top: rem(60px);
+    padding-left: rem(40px);
+    background-color: #fbf8f1;
+    
 
     @include tablets() {
         margin-left: rem(0px);
-        padding-bottom: rem(70px);
+        margin-bottom: rem(70px);
     }
 
     @include phones() {
         margin-left: rem(0px);
         margin-right: rem(0px);
-        padding-bottom: rem(100px);
+        margin-bottom: rem(100px);
     }
+}
+
+.blog-container__bg {
+   background: url(./../images/bg.svg) 50% 0% no-repeat;
+   height: rem(175px);
+   width: 100vw;
+   padding: rem(0px);
+   margin: rem(0px);
+}
+
+.wrap__list-article {
+  position: relative;
+  top: 0;
+}
+
+.wrap__list-article.fixed {
+  left: 0;
+  width: 30%;
+  padding: 0 40px;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
 }
 
 .list-article__art,
@@ -221,6 +248,10 @@ h5.header-blog__title {
     height: 100%;
     color: rgb(69, 90, 100);
     margin-top: rem(10px);
+}
+
+.article-text_red {
+    color: red;
 }
 
 

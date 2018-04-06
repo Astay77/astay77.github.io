@@ -7,79 +7,82 @@ block content
 	div.welcome__login_container
 		button.welcome__login 
 			h5 Авторизоваться
-	div.welcome-wrap <!-- flip-container -->
-		div.welcome__container(ontouchstart:"this.classList.toggle('hover');") <!--flipper-->
-			div.welcome-block__front <!-- front -->
-				div.welcome-block__content 
-					div.welcome__avatar
-					div.welcome__name
-						h4 Александр Салтыков
-					div.welcome__title
-						h5 Личный сайт веб разработчика
-				div.welcome__soc
-					ul.welcome__soc-list
-						li.welcome__soc-item
-							a.welcome__soc-link(href='https://vk.com', title='VK')
-								svg.welcome__item-icon
-									<use xlink:href="./assets/images/sprite-welcome.svg#vk"></use> 
-						li.welcome__soc-item
-							a.welcome__soc-link(href='https://github.com/Astay77', title='GitHub')
-								svg.welcome__item-icon
-									<use xlink:href="./assets/images/sprite-welcome.svg#github"></use>
-						li.welcome__soc-item
-							a.welcome__soc-link(href='https://www.linkedin.com', title='Link')
-								svg.welcome__item-icon
-									<use xlink:href="./assets/images/sprite-welcome.svg#in"></use>
+	div.welcome-container
+		div.welcome-wrap <!-- flip-container -->
+			div.welcome__flipper(ontouchstart:"this.classList.toggle('hover');") <!--flipper-->
+				div.welcome-block__front <!-- front -->
+					div.welcome-block__content 
+						div.welcome__avatar
+						div.welcome__name
+							h4 Александр Салтыков
+						div.welcome__title
+							h5 Личный сайт веб разработчика
+					div.welcome__soc
+						ul.welcome__soc-list
+							li.welcome__soc-item
+								a.welcome__soc-link(href='https://vk.com', title='VK')
+									svg.welcome__item-icon
+										<use xlink:href="./assets/images/sprite-welcome.svg#vk"></use> 
+							li.welcome__soc-item
+								a.welcome__soc-link(href='https://github.com/Astay77', title='GitHub')
+									svg.welcome__item-icon
+										<use xlink:href="./assets/images/sprite-welcome.svg#github"></use>
+							li.welcome__soc-item
+								a.welcome__soc-link(href='https://www.linkedin.com', title='Link')
+									svg.welcome__item-icon
+										<use xlink:href="./assets/images/sprite-welcome.svg#in"></use>
 
-				nav.welcome-nav
-					ul.welcome-nav__block
-						li.welcome-nav__item
-							a.welcome__item(href='./my-works.html' title='main') 
-								h5.welcome-button Мои работы
-						li.welcome-nav__item
-							a.welcome__item(href='./about.html' title='about')
-								h5.welcome-button Обо мне
-						li.welcome-nav__item
-							a.welcome__item(href='./blog.html' title='blog') 
-								h5.welcome-button Блог
-			div.login-block
-				div.login-title
-					div.gorizont__line 
-					h3.login-title__text Авторизуйтесь
-					div.gorizont__line 
-				label(for="login__field")
-					<!--svg.login-icon-->
-						<!--<use xlink:href="./assets/images/icon.svg#login"></use>-->
-					input.login__field(name="login__field" id="login__field" placeholder="Логин")
-				label(for="login__password")
-					<!--svg.password-icon-->
-						<!--<use xlink:href="./assets/images/icon.svg#password"></use>-->
-					input.login__password(name="login__password" id="login__password" placeholder="Пароль")
-				div.form__input-elemrow
-					label.checkbox__label(id="i__human")
-						input.checkbox(type="checkbox" name="i__human"  id="i__human" value="1")
-						span.checkbox-custom
-						span.form__field-title Я человек
-				div.login__question
-					h5 Вы точно не робот?
-				div.form__input-elemrow
-					div.form__controls
-						label.form__radio.radio1(for="login__radio")
-							input.login__radio(name="login__radio" type="radio" id="login__radio" value="Да")
-							span.form__field-title
-								span.form__btn Да
-						label.form__radio.radio2(for="login__radio2")
-							input.login__radio(name="login__radio" type="radio" id="login__radio2" value="Не уверен")
-							span.form__field-title
-								span.form__btn Не уверен
-				nav.welcome-nav
-					ul.welcome-nav__block
-						li.welcome-nav__item
-							a.welcome__item(href='./index.html' title='main') 
-								h5.welcome-button На главную
-						li.welcome-nav__item
-							a.welcome__item(href='#' title='sign in')
-								h5.welcome-button Войти
+					nav.welcome-nav
+						ul.welcome-nav__block
+							li.welcome-nav__item
+								a.welcome__item(href='./my-works.html' title='main') 
+									h5.welcome-button Мои работы
+							li.welcome-nav__item
+								a.welcome__item(href='./about.html' title='about')
+									h5.welcome-button Обо мне
+							li.welcome-nav__item
+								a.welcome__item(href='./blog.html' title='blog') 
+									h5.welcome-button Блог
+				div.login-block(id='authorization')
+					div.login-title
+						div.gorizont__line 
+						h3.login-title__text Авторизуйтесь
+						div.gorizont__line 
+					label.form-field(for="login__field")
+						span.icon-block
+							svg.login-icon
+								<use xlink:href="./assets/images/icon.svg#login"></use>
+						input.login__field(name="login__field" id="login__field" placeholder="Логин")
+					label.form-field(for="login__password")
+						span.icon-block
+							svg.password-icon
+									<use xlink:href="./assets/images/icon.svg#password"></use>
+						input.login__password(name="login__password" id="login__password" placeholder="Пароль")
+					div.form__input-elemrow
+						label.checkbox__label(id="i__human")
+							input.checkbox(type="checkbox" name="i__human"  id="i__human" value="1")
+							span.checkbox-custom
+							span.form__field-title Я человек
+					div.login__question
+						h5 Вы точно не робот?
+					div.form__input-elemrow
+						div.form__controls
+							label.form__radio.radio1
+								input.form__input-radio(type="radio" name="radio")
+								span.form__radio-text
+									<span class="form__btn"></span> Да
+							label.form__radio.radio2            
+								input.form__input-radio(type="radio" name="radio")
+								span.form__radio-text
+									<span class="form__btn"></span> Не уверен                  
+					nav.welcome-nav
+						ul.welcome-nav__block
+							li.welcome-nav__item
+								a.welcome__item(href='./index.html' title='main') 
+									h5.welcome-button На главную
+							li.welcome-nav__item
+								a.welcome__item(href='#' title='sign in')
+									h5.welcome-button Войти
 
 
 	include ./../common/footer__small.pug

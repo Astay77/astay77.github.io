@@ -7,12 +7,24 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <link rel="stylesheet" href="./assets/styles/app.min.css" media="screen, projection, print">
     <script src="./assets/scripts/bundle.js" defer></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
-      <div class="header__about-works"><a class="menu-hamburger" href="#"><img class="menu-hamburger__icon" src="./assets/images/hamburger.svg" alt="menu hamburger"></a>
+      <header class="header__about-works">
+        <div class="hamburger-container" id="toggle"><span class="button_container__item button_container--top"></span><span class="button_container__item button_container--middle"></span><span class="button_container__item button_container--bottom"></span></div>
+        <div class="overlay" id="overlay">
+          <nav class="overlay-menu">
+            <ul class="overlay-menu__list">
+              <li class="overlay-menu__item"><a class="overlay-menu__link" href="/my-works.html">мои работы</a></li>
+              <li class="overlay-menu__item"><a class="overlay-menu__link" href="/blog.html">блог</a></li>
+              <li class="overlay-menu__item"><a class="overlay-menu__link" href="/about.html">обо мне</a></li>
+              <li class="overlay-menu__item"><a class="overlay-menu__link" href="/index.html#authorization">авторизация</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="header-container">
           <div class="header__block">
             <svg class="svg-text__portfolio"><use xlink:href="./assets/images/text.svg#portfolio-header"></use></svg>
@@ -35,9 +47,8 @@
             </div>
           </div>
         </div><a class="page-down" href="#"><img class="page-down__icon" src="./assets/images/arrow_down.svg" alt="page down"></a>
-      </div>
+      </header>
       <section class="myworks-title">
-        <div class="myworks-title__bg"><img class="myworks-title__bg-svg" src="./assets/images/bg.svg" alt="bg"></div>
         <div class="myworks-title__block">
           <svg class="svg-text__works"><use xlink:href="./assets/images/text.svg#works-header"></use></svg>
           <div class="myworks-title__block-content">   
@@ -47,29 +58,45 @@
           </div>
         </div>
       </section>
-      <section class="portfolio-block">
-        <div class="block-left">
-          <div class="block-left__container">
-            <div class="block-title">
+      <section class="section works">
+        <div class="works__content">
+          <div class="works__left">
+            <div class="works-slider__content">
+              <div class="works-slider__content-wrapper">
+                <div class="works-slider__display"><img class="works-slider__display-pic" src="" alt=""></div>
+                <div class="works-slider__item-about">
+                  <div class="works__subtitle">
+                    <div class="subtitle"></div>
+                  </div>
+                  <div class="works__content-desc"></div>
+                  <div class="works__content-btn"><a class="works__content-view" href="#"><i class="fa works__content-view-icon fa-link"></i> Посмотреть сайт</a></div>
+                </div>
+              </div><!--div.block-title
               <div class="gorizont__line"></div>
               <h3 class="block-left__text">Сайт школы онлайн </h3>
               <div class="gorizont__line"></div>
+              <h3 class="block-left__text">образования                     </h3>
+              <div class="separate-line"></div>
+              <div class="block-tehnology">
+                <h5 class="block-tehnology__text">HTML, CSS, JAVASCRIPT</h5>
+              </div>
+              <div class="separate-line"></div>
+              <div class="block-left__button">
+                <h5 class="button__see-site">Посмотреть сайт --></h5>
+              </div>
             </div>
-            <h3 class="block-left__text">образования                     </h3>
-            <div class="separate-line"></div>
-            <div class="block-tehnology">
-              <h5 class="block-tehnology__text">HTML, CSS, JAVASCRIPT</h5>
-            </div>
-            <div class="separate-line"></div>
-            <div class="block-left__button">
-              <h5 class="button__see-site">Посмотреть сайт</h5>
+            <div class="works__right">
+              <div class="works-slider">
+                <div class="works-slider__controls"><a class="works-slider__control-btn works-slider__control-btn_left" href="#">
+                    <ul class="works-slider__control-list">
+                      <li class="works-slider__control-item" data-full="./assets/images/my-works__slider/1.png" data-title="Агентсво интернет решений &amp;quot;ITLoft&amp;quot;" data-skills="node" data-link="http://itloft.ru/"><img class="works-slider___control-img" src="./assets/images/my-works__slider/1.png" alt="examle work"></li>
+                      <li class="works-slider__control-item" data-full="./assets/images/my-works__slider/2.png" data-title="Школа онлайн-образования &amp;quot;LoftSchool&amp;quot;" data-skills="html5, CSS3, javascript, php" data-link="http://loftschool.com/"><img class="works-slider___control-img" src="./assets/images/my-works__slider/2.png" alt="examle work"></li>
+                      <li class="works-slider__control-item" data-full="./assets/images/my-works__slider/3.png" data-title="Портал обучающих уроков &amp;quot;LoftBlog&amp;quot;" data-skills="Ruby on Rails, javascript, RESTful" data-link="http://loftblog.ru/"><img class="works-slider___control-img" src="./assets/images/my-works__slider/3.png" alt="examle work"></li>
+                      <li class="works-slider__control-item" data-full="./assets/images/my-works__slider/4.png" data-title="Сайт &amp;quot;Атма йога&amp;quot;" data-skills="UX, design, seo" data-link="http://atmayoga.ru/"><img class="works-slider___control-img" src="./assets/images/my-works__slider/4.png" alt="examle work"></li>
+                    </ul></a><a class="works-slider__control-btn works-slider__control-btn_right" href="#"></a></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="block-right"><!--div.centr__block_slaider-->
-<!--    include ../common/slider.pug-->
-          <div class="block-right__visual"></div>
-          <div class="block-right__button"></div>
         </div>
       </section>
       <section class="reviews">
@@ -112,30 +139,35 @@
             </div>
           </div>
         </div>
-        <div class="feedback-form__container">
-          <form class="feedback-form" method="POST" action="/ register">
-            <div class="feedback-title">
-              <div class="gorizont__line"></div>
-              <h3 class="feedback-title__text">Связаться со мной</h3>
-              <div class="gorizont__line"></div>
+        <div class="feedback-form__wrap">
+          <div class="feedback-form__container">
+            <div class="blur-container"></div>
+            <div class="form-container">
+              <div class="feedback-title">
+                <div class="gorizont__line"></div>
+                <h3 class="feedback-title__text">Связаться со мной</h3>
+                <div class="gorizont__line"></div>
+              </div>
+              <form class="feedback-form" method="POST" action="/ register">          
+                <label for="feedback__name"></label>
+                <input class="feedback-field" name="feedback__name" id="feedback__name" placeholder="Имя">
+                <label for="feedback__email"></label>
+                <input class="feedback-field" name="feedback__email" id="feedback__email" placeholder="Email">
+                <label for="feedback__message"></label>
+                <textarea class="textarea-field" name="feedback__message" id="feedback__message" placeholder="Ваше сообщение"></textarea>
+                <div class="form-button">
+                  <ul class="form-button__block">
+                    <li class="form-button__item">
+                      <button class="form-button__button" type="submit">Отправить</button>
+                    </li>
+                    <li class="form-button__item">
+                      <button class="form-button__button" type="reset">Очистить</button>
+                    </li>
+                  </ul>
+                </div>
+              </form>
             </div>
-            <label for="feedback__name"></label>
-            <input class="feedback-field" name="feedback__name" id="feedback__name" placeholder="Имя">
-            <label for="feedback__email"></label>
-            <input class="feedback-field" name="feedback__email" id="feedback__email" placeholder="Email">
-            <label for="feedback__message"></label>
-            <textarea class="textarea-field" name="feedback__message" id="feedback__message" placeholder="Ваше сообщение"></textarea>
-            <div class="form-button">
-              <ul class="form-button__block">
-                <li class="form-button__item">
-                  <button class="form-button__button" type="submit">Отправить</button>
-                </li>
-                <li class="form-button__item">
-                  <button class="form-button__button" type="reset">Очистить</button>
-                </li>
-              </ul>
-            </div>
-          </form>
+          </div>
         </div><a class="page-up" href="#"><img class="page-up__icon" src="./assets/images/arrow_down.svg" alt="page down"></a>
       </section>
       <footer class="footer__big"> 
@@ -173,6 +205,7 @@
           </div>
         </div>
       </footer>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmoXORWdIQoGpD6VJLqdxpJsqi9iTios4&amp;callback=initMap"></script>
     </div>
   </body>
 </html>

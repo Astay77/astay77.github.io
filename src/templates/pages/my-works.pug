@@ -5,10 +5,7 @@ block variables
 
 block content
 	include ./../common/header__about__works.pug
-	
 	section.myworks-title
-		div.myworks-title__bg
-			img.myworks-title__bg-svg(src="./assets/images/bg.svg" alt="bg")
 		div.myworks-title__block
 			svg.svg-text__works
 				<use xlink:href="./assets/images/text.svg#works-header"></use>
@@ -16,25 +13,45 @@ block content
 				div.gorizont__line
 				h1.myworks-title__text Мои работы
 				div.gorizont__line
-	section.portfolio-block
-		div.block-left
-			div.block-left__container
-				div.block-title
-					div.gorizont__line
-					h3.block-left__text Сайт школы онлайн 
-					div.gorizont__line
-				h3.block-left__text образования                     
-				div.separate-line
-				div.block-tehnology
-					h5.block-tehnology__text HTML, CSS, JAVASCRIPT
-				div.separate-line
-				div.block-left__button
-					h5.button__see-site Посмотреть сайт
-		div.block-right
-			<!--div.centr__block_slaider-->
-			<!--    include ../common/slider.pug-->
-			div.block-right__visual
-			div.block-right__button
+	section.section.works
+		div.works__content
+			div.works__left
+				div.works-slider__content
+					div.works-slider__content-wrapper
+						div.works-slider__display
+							img.works-slider__display-pic(src="" alt="")
+						div.works-slider__item-about
+							div.works__subtitle
+								div.subtitle
+							div.works__content-desc
+							div.works__content-btn
+								a.works__content-view(href="#")
+									<i class="fa works__content-view-icon fa-link"></i> Посмотреть сайт
+					<!--div.block-title
+						div.gorizont__line
+						h3.block-left__text Сайт школы онлайн 
+						div.gorizont__line
+					h3.block-left__text образования                     
+					div.separate-line
+					div.block-tehnology
+						h5.block-tehnology__text HTML, CSS, JAVASCRIPT
+					div.separate-line
+					div.block-left__button
+						h5.button__see-site Посмотреть сайт -->
+				div.works__right
+					div.works-slider
+						div.works-slider__controls
+							a.works-slider__control-btn.works-slider__control-btn_left(href="#")
+								ul.works-slider__control-list
+									li.works-slider__control-item(data-full="./assets/images/my-works__slider/1.png" data-title="Агентсво интернет решений &quot;ITLoft&quot;" data-skills="node" data-link="http://itloft.ru/")
+										img.works-slider___control-img(src="./assets/images/my-works__slider/1.png" alt="examle work")
+									li.works-slider__control-item(data-full="./assets/images/my-works__slider/2.png" data-title="Школа онлайн-образования &quot;LoftSchool&quot;" data-skills="html5, CSS3, javascript, php" data-link="http://loftschool.com/")
+										img.works-slider___control-img(src="./assets/images/my-works__slider/2.png" alt="examle work")
+									li.works-slider__control-item(data-full="./assets/images/my-works__slider/3.png" data-title="Портал обучающих уроков &quot;LoftBlog&quot;" data-skills="Ruby on Rails, javascript, RESTful" data-link="http://loftblog.ru/")
+										img.works-slider___control-img(src="./assets/images/my-works__slider/3.png" alt="examle work")
+									li.works-slider__control-item(data-full="./assets/images/my-works__slider/4.png" data-title="Сайт &quot;Атма йога&quot;" data-skills="UX, design, seo" data-link="http://atmayoga.ru/")
+										img.works-slider___control-img(src="./assets/images/my-works__slider/4.png" alt="examle work")
+							a.works-slider__control-btn.works-slider__control-btn_right(href="#")
 	section.reviews
 		div.reviews-title__container
 			div.reviews-title
@@ -67,30 +84,29 @@ block content
 					h5.reviews-name__text Сабанцев Владимир
 				div.reviews-job
 					h5.reviews-job__text преподаватель
-		div.feedback-form__container
-			form.feedback-form(method = 'POST' action = '/ register')
-				div.feedback-title
-					div.gorizont__line
-					h3.feedback-title__text Связаться со мной
-					div.gorizont__line
-				label(for="feedback__name")
-				input.feedback-field(name="feedback__name" id="feedback__name" placeholder="Имя")
-				label(for="feedback__email")
-				input.feedback-field(name="feedback__email" id="feedback__email" placeholder="Email")
-				label(for="feedback__message")
-				textarea.textarea-field(name="feedback__message" id="feedback__message" placeholder="Ваше сообщение")
-				
-				div.form-button
-					ul.form-button__block
-						li.form-button__item
-							button.form-button__button(type="submit") Отправить
-						li.form-button__item
-							button.form-button__button(type="reset") Очистить
+		div.feedback-form__wrap
+			div.feedback-form__container
+				div.blur-container
+				div.form-container
+					div.feedback-title
+						div.gorizont__line
+						h3.feedback-title__text Связаться со мной
+						div.gorizont__line
+					form.feedback-form(method = 'POST' action = '/ register')           
+						label(for="feedback__name")
+						input.feedback-field(name="feedback__name" id="feedback__name" placeholder="Имя")
+						label(for="feedback__email")
+						input.feedback-field(name="feedback__email" id="feedback__email" placeholder="Email")
+						label(for="feedback__message")
+						textarea.textarea-field(name="feedback__message" id="feedback__message" placeholder="Ваше сообщение")
+						div.form-button
+							ul.form-button__block
+								li.form-button__item
+									button.form-button__button(type="submit") Отправить
+								li.form-button__item
+									button.form-button__button(type="reset") Очистить
 		a.page-up(href="#")
 			img.page-up__icon(src="./assets/images/arrow_down.svg" alt="page down")
-
-
-
 	include ./../common/footer.pug
 
 

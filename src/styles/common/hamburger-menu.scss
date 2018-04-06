@@ -1,0 +1,173 @@
+//menu hamburger
+.hamburger-container {
+    position: absolute;
+    top: 1%;
+    right: 4%;
+    height: rem(47px); //$button-height;
+    width: rem(55px); //$button-width;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity .25s ease;
+
+    @include phones() {
+        height: rem(25px); //$button-height;
+        width: rem(33px); //$button-width;
+        right: 6%;
+        top: 0.5%;
+    }
+
+
+    &.button_container--active {
+        opacity: 0.7;
+        .button_container--top {
+            transform: translateY(13px) translateX(0) rotate(45deg);
+            border-radius: 5px;
+
+              @include phones() {
+                transform: translateY(10px) translateX(0) rotate(45deg);
+              }
+        }
+
+        @include phones() {}
+        .button_container--middle {
+            opacity: 0;
+        }
+
+        .button_container--bottom {
+            transform: translateY(-24px) translateX(0) rotate(-45deg);
+            border-radius: 5px;
+
+            @include phones() {
+            transform: translateY(-14px) translateX(0) rotate(-45deg);
+        }
+        }
+
+        
+    }
+
+    .button_container__item {
+        background: #fff;
+        border: none;
+        height: rem(7px);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .35s ease;
+        cursor: pointer;
+        border-radius: rem(3px);
+
+        @include phones() {
+            height: rem(5px);
+            border-radius: rem(1px);
+        }
+
+        &:nth-of-type(2) {
+            top: rem(19px);
+            @include phones() {
+                top: rem(12px);
+            }
+        }
+
+        &:nth-of-type(3) {
+            top: rem(39px);
+
+            @include phones() {
+                top: rem(24px);
+            }
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    background: #00bfa5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0.5;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+
+    &.overlay--open {
+        opacity: .99;
+        visibility: visible;
+        height: 100%;
+        z-index: 100;
+
+        .overlay-menu__item {
+            animation: fadeInRight .5s ease forwards;
+            animation-delay: .35s;
+        }
+    }
+}
+
+.overlay-menu {
+    position: absolute;
+    height: 70%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    text-align: center;
+    width: rem(500px);
+}
+
+.overlay-menu__item {
+    display: block;
+    position: relative;
+    line-height: 1;
+    opacity: 0;
+    margin-bottom: rem(100px);
+
+    @include phones() {
+        margin-bottom: rem(50px);
+    }
+}
+
+
+
+.overlay-menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.overlay-menu__link {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: rem(49px);
+    font-family: 'bernier_regularregular', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 0.49;
+    text-align: center;
+
+    @include phones() {
+        font-size: rem(35px);
+    }
+}
+
+
+
+
+.overlay-menu__link:hover {
+    color: #009688;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}

@@ -7,12 +7,24 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <link rel="stylesheet" href="./assets/styles/app.min.css" media="screen, projection, print">
     <script src="./assets/scripts/bundle.js" defer></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
-      <header class="header-blog"><a class="menu-hamburger" href="#"><img class="menu-hamburger__icon" src="./assets/images/hamburger.svg" alt="menu hamburger"></a>
+      <header class="header-blog">
+        <div class="hamburger-container" id="toggle"><span class="button_container__item button_container--top"></span><span class="button_container__item button_container--middle"></span><span class="button_container__item button_container--bottom"></span></div>
+        <div class="overlay" id="overlay">
+          <nav class="overlay-menu">
+            <ul class="overlay-menu__list">
+              <li class="overlay-menu__item"><a class="overlay-menu__link" href="/my-works.html">мои работы</a></li>
+              <li class="overlay-menu__item"><a class="overlay-menu__link" href="/blog.html">блог</a></li>
+              <li class="overlay-menu__item"><a class="overlay-menu__link" href="/about.html">обо мне</a></li>
+              <li class="overlay-menu__item"><a class="overlay-menu__link" href="/index.html#authorization">авторизация</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="header__myphoto"></div>
         <div class="blog-title__container">
           <svg class="svg-text__blog"><use xlink:href="./assets/images/text.svg#blog-header"></use></svg>
@@ -32,37 +44,67 @@
           </ul>
         </div><a class="page-down page-down__blog_none" href="#"><img class="page-down__icon" src="./assets/images/arrow_down.svg" alt="page down"></a>
       </header>
+      <div class="blog-container__bg"></div>
       <div class="blog-container">
         <aside class="blog-sidebar">
           <div class="blog-menu__swipe"></div>
-          <ul class="list-article"> 
-            <li class="list-article__art list-article__artactiv">
-              <h5>Самое важное в SASS</h5>
-            </li>
-            <li class="list-article__art">
-              <h5>Приёмы в вёрстке, без которых не обходится ни один сайт</h5>
-            </li>
-            <li class="list-article__art">
-              <h5>Самый необходимый набор Gulp плагинов </h5>
-            </li>
-            <li class="list-article__art">
-              <h5>Почему я выбрал Pug    </h5>
-            </li>
-          </ul>
+          <div class="wrap__list-article"> 
+            <ul class="list-article"> 
+              <li class="list-article__art list-article__artactiv">
+                <h5>Самое важное в SASS</h5>
+              </li>
+              <li class="list-article__art">
+                <h5>Приёмы в вёрстке, без которых не обходится ни один сайт</h5>
+              </li>
+              <li class="list-article__art">
+                <h5>Самый необходимый набор Gulp плагинов </h5>
+              </li>
+              <li class="list-article__art">
+                <h5>Почему я выбрал Pug    </h5>
+              </li>
+            </ul>
+          </div>
         </aside>
-        <article class="blog-content"> 
-          <div class="blog-content__article">        
+        <div class="blog-content"> 
+          <article class="blog-content__article">        
             <h3 class="blog-content__title">Самое важное в SASS </h3>
             <h5 class="date">22 ноября 2017  </h5>
             <h5 class="article-text">Вот так Sass описывает сам себя в своей документации: Sass — это расширение CSS, которое добавляет силу и элегантность к основному языку. Главная цель Sass — исправить недостатки CSS. Как мы все знаем, это не самый лучший язык в мире. Являясь довольно простым для освоения, он может быстро стать запутанным, особенно на больших проектах. Вот тут-то и вступает в свою роль Sass как метаязык, который улучшает синтаксис CSS, чтобы предоставить дополнительные возможности и удобные инструменты. Между тем, Sass остаётся консервативным в отношении языка CSS. Цель не в том, чтобы превратить CSS в полнофункциональный язык программирования; Sass хочет лишь помочь там, где не справляется CSS. Поэтому начать использовать Sass – не сложнее, чем начать изучать CSS: он просто добавляет дополнительные возможности поверх CSS.</h5>
-          </div>
+          </article>
           <div class="line__separator"></div>
-          <div class="blog-content__article"> 
+          <article class="blog-content__article"> 
             <h3 class="blog-content__title">Приёмы в вёрстке, без которых не обходится ни один сайт</h3>
             <h5 class="date">13 ноября 2017 </h5>
             <h5 class="article-text">Адаптивная вёрстка сайта позволяет веб-страницам автоматически подстраиваться под экраны планшетов и смартфонов. Мобильный интернет-трафик растёт с каждым годом и чтобы эффективно обрабатывать этот трафик, нужно предлагать пользователям адаптивные сайты с удобным интерфейсом. Поисковые системы используют ряд критериев для оценки адаптивности сайта при просмотре на мобильных устройствах. Google старается упростить пользование Интернетом для владельцев смартфонов и планшетов, отмечая в мобильной выдаче адаптированные под мобильные устройства сайты специальной пометкой mobile-friendly. В Яндексе также работает алгоритм, который отдает предпочтение сайтам с мобильной/адаптивной версией для пользователей в мобильном поиске. Проверить отображение страницы на мобильных устройствах можно на сервисах Яндекс.Вебмастер и Google Developers.</h5>
-          </div>
-        </article>
+          </article>
+          <div class="line__separator"></div>
+          <article class="blog-content__article">        
+            <h3 class="blog-content__title">Самый необходимый набор Gulp плагинов </h3>
+            <h5 class="date">29 ноября 2017  </h5>
+            <h5 class="article-text article-text_red">gulp-util </h5>
+            <h5 class="article-text">Source: gulp-util (Github: gulpjs/gulp-util , License: MIT)</h5>
+            <h5 class="article-text">Это официальный инструмент для gulp.js. Авторы решили выделить вспомогательные функции в отдельный модуль, который, в конечном итоге, все равно нужно каждый раз подключать. Сюда относится такая функциональность, как логирование, подсветка вывода в консоли, и так далее. Полный список можно посмотреть на странице gulp-util на Github.</h5>
+            <h5 class="article-text article-text_red">gulp-clean </h5>
+            <h5 class="article-text">Source: gulp-clean (Github: peter-vilja/gulp-clean , License: MIT)</h5>
+            <h5 class="article-text">Первое, что должна сделать любая уважающая себя система сборки, это очистить сборочную директорию и удалить все, в ней находится. После установки этого плагина вы можете запустить команду gulp clean и директория build будет очищена.</h5>
+            <h5 class="article-text article-text_red">gulp-concat </h5>
+            <h5 class="article-text">Source: gulp-concat (Github: wearefractal/gulp-concat , License: MIT)</h5>
+            <h5 class="article-text">Можно предположить, что ваше HTML5 приложение имеет несколько внешних зависимостей, таких как jQuery, возможно Modernizr и т.д. Вместо того, чтобы подключать зависимости в отдельных тегах script на странице, было бы прекрасно объединить их в один файл. Для этого подойдет gulp-concat.</h5>
+            <h5 class="article-text article-text_red"> gulp-uglify</h5>
+            <h5 class="article-text">Source: gulp-uglify (Github: terinjokes/gulp-uglify , License: MIT)</h5>
+            <h5 class="article-text">Следующая вещь, которую мы должны сделать - это минимизировать наш vendor.js. Добавим добавим это в задачу vendor. Это также то место, где сборка может работать неправильно, т.к. gulp-uglify выбрасывает ошибку, если у вас некорректный синтаксис JavaScript. Для этого необходимо добавить обработку ошибки.</h5>
+            <h5 class="article-text article-text_red">gulp-less</h5>
+            <h5 class="article-text">Source: gulp-less (Github: plus3network/gulp-less , License: MIT)</h5>
+            <h5 class="article-text">Представим, что вы используете прекрасный препроцессор LESS для генерации CSS файлов и теперь хотите их сгенерировать. gulp-less поможет!</h5><!-- https://getinstance.info/articles/tools/9-gulp-plugins/ -->
+          </article>
+          <div class="line__separator"></div>
+          <article class="blog-content__article">        
+            <h3 class="blog-content__title">Почему я выбрал Pug </h3>
+            <h5 class="date">15 декабря 2017  </h5>
+            <h5 class="article-text">Pug — это препроцессор HTML и шаблонизатор, который был написан на JavaScript для Node.js. Проще говоря, Pug — это именно то средство, которое предоставляет вам возможность написания разметки совершенно по новому, с целым рядом преимуществ по сравнению с обычным HTML.</h5>
+            <h5 class="article-text">Pug компилирует это точно, рассматривая первое слово в каждой строке в качестве тега, в то время как последующие слова на этой строке обрабатываются как текст внутри тега.</h5>
+          </article>
+        </div>
       </div>
       <footer class="footer__big"> 
         <div class="footer__big_container">
@@ -99,6 +141,7 @@
           </div>
         </div>
       </footer>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmoXORWdIQoGpD6VJLqdxpJsqi9iTios4&amp;callback=initMap"></script>
     </div>
   </body>
 </html>

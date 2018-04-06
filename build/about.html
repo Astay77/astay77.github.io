@@ -7,12 +7,24 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <link rel="stylesheet" href="./assets/styles/app.min.css" media="screen, projection, print">
     <script src="./assets/scripts/bundle.js" defer></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
-      <div class="header__about-works"><a class="menu-hamburger" href="#"><img class="menu-hamburger__icon" src="./assets/images/hamburger.svg" alt="menu hamburger"></a>
+      <header class="header__about-works">
+        <div class="hamburger-container" id="toggle"><span class="button_container__item button_container--top"></span><span class="button_container__item button_container--middle"></span><span class="button_container__item button_container--bottom"></span></div>
+        <div class="overlay" id="overlay">
+          <nav class="overlay-menu">
+            <ul class="overlay-menu__list">
+              <li class="overlay-menu__item"><a class="overlay-menu__link" href="/my-works.html">мои работы</a></li>
+              <li class="overlay-menu__item"><a class="overlay-menu__link" href="/blog.html">блог</a></li>
+              <li class="overlay-menu__item"><a class="overlay-menu__link" href="/about.html">обо мне</a></li>
+              <li class="overlay-menu__item"><a class="overlay-menu__link" href="/index.html#authorization">авторизация</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="header-container">
           <div class="header__block">
             <svg class="svg-text__portfolio"><use xlink:href="./assets/images/text.svg#portfolio-header"></use></svg>
@@ -35,8 +47,8 @@
             </div>
           </div>
         </div><a class="page-down" href="#"><img class="page-down__icon" src="./assets/images/arrow_down.svg" alt="page down"></a>
-      </div>
-      <div class="about-container">
+      </header>
+      <section class="about-container">
         <section class="about__section_left">
           <div class="about-title">
             <svg class="svg-text__about-about"><use xlink:href="./assets/images/text.svg#about-header"></use></svg>
@@ -139,8 +151,9 @@
             </ul>
           </div>
         </section>
-      </div>
+      </section>
       <section class="map">
+        <div class="map-container" id="map"> </div>
         <div class="contacts-card">
           <div class="about__title-small">
             <div class="gorizont__line"></div>
@@ -198,6 +211,7 @@
           </div>
         </div>
       </footer>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmoXORWdIQoGpD6VJLqdxpJsqi9iTios4&amp;callback=initMap"></script>
     </div>
   </body>
 </html>

@@ -1,16 +1,24 @@
 .header__about-works {
     width: 100%;
-    height: rem(500px);
+    height: 100vh;
+    margin-bottom: -10%;
+    padding-top: 2%;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     z-index: 10;
+
+    @include laptop() {
+        margin-bottom: -15%;
+    }
 
     @include tablets() {
         height: 100vh;
+        margin-bottom: -30%;
     }
 
     @include phones() {
         height: 100vh;
+        margin-bottom: -63%;
     }
 }
 
@@ -91,31 +99,11 @@
     cursor: pointer;
 }
 
-.menu-hamburger {
-    position: absolute;
-    top: rem(30px);
-    right: rem(60px);
-    width: rem(40px);
-    height: rem(35px);
 
-    @include tablets() {
-        top: rem(25px);
-        right: rem(25px);
-    }
 
-    @include phones() {
-        height: rem(25px);
-        top: rem(10px);
-        right: rem(0px);
-    }
+.body-active-menu {
+    overflow: hidden;
 }
-
-.menu-hamburger__icon {
-    @include phones() {
-        width: rem(25px);
-    }
-}
-
 
 
 .header-block {
