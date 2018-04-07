@@ -1,0 +1,45 @@
+
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1000;
+	background: url('./../images/decor/bg__preloader.jpg') 50%/cover no-repeat; 
+	transition: 1s all;
+	opacity: 1;
+	visibility: visible;
+
+	.loader {
+		//background: url('./../images/decor/preloader_round.svg') 50%/cover no-repeat; 
+		width: rem(75px);
+		height: rem(75px);
+		line-height: rem(75px);
+		//border: rem(10px) solid white;
+		//border-radius: 50%;
+		border-top-color: blue;
+		left: 50%;
+		top: 50%;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		//animation: 1s spin infinite linear;
+		text-align: center;
+		font-size: rem(48px);
+		font-weight: 700;
+		color: #fff;
+	}
+	&.done {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+}
+@keyframes spin {
+	from {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	to {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
