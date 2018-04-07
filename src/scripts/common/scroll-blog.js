@@ -1,4 +1,4 @@
-let scrollMenu= (function(){
+let scrollMenu = (function(){
   const $news = $('.blog-content__article');
   const $item = $('.list-article__art');
   const $wrapMenu = $('.wrap__list-article');
@@ -74,5 +74,6 @@ let scrollMenu= (function(){
 
 })()
 
-scrollMenu.init();
+
+module.exports = scrollMenu;
 

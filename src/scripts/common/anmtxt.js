@@ -40,4 +40,3 @@ var aviatitle = {
 }
 
 module.exports = aviatitle;
-//aviatitle.init();
