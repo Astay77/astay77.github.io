@@ -39,4 +39,5 @@ var aviatitle = {
   }
 }
 
-aviatitle.init();
+module.exports = aviatitle;
+//aviatitle.init();

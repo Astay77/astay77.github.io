@@ -8,6 +8,7 @@ const scrollBlog = require('./common/scroll-blog');
 scrollBlog(); 
 
 const aviatitle = require('./common/anmtxt');
+aviatitle();
 
 
 /*var initMapObj = require('./common/map'); 

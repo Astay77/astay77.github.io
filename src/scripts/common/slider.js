@@ -276,4 +276,4 @@ $('.works-slider__control-btn_right').on('click', function (e) {
 
 console.dir(slider);
 
-module.exports = sliderInit;
+module.exports = Slider;

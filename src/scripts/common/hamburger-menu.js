@@ -22,6 +22,8 @@ let menu = (function(options) {
   menu: '#overlay'
 });
 
-menu.init();
+module.exports = menu;
+
+
 
 
